@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaiKhoanActivity"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:padding="20dp"
+        android:background="@drawable/shadow_button_layer_list">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/_11345218_1265228644277602_2446569094166920773_n"
+            android:layout_marginEnd="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tạ Kế Phúc"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/txt_Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ongtrumandroid123@gmail.com"
+                android:textSize="14sp"
+                android:textColor="#727272"
+                android:gravity="right"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_Rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thành viên Vàng"
+                android:textSize="16sp"
+                android:textColor="#727272"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_Point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tích lũy: 21000 điểm  "
+                android:drawableRight="@drawable/ic_baseline_celebration_24"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:gravity="right" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_border_button">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   Thông tin cá nhân"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:background="@drawable/shadow_button_layer_list"
+            app:backgroundTint="@null"
+            android:textAllCaps="false"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   Lịch sử đơn hàng"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:drawableLeft="@drawable/ic_baseline_history_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:background="@drawable/shadow_button_layer_list"
+            app:backgroundTint="@null"
+            android:textAllCaps="false"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   Danh sách voucher"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:drawableLeft="@drawable/ic_baseline_card_giftcard_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:background="@drawable/shadow_button_layer_list"
+            app:backgroundTint="@null"
+            android:textAllCaps="false"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   Cài đặt tài khoản"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:backgroundTint="@null"
+            android:textAllCaps="false"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/shadow_button_layer_list"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="25dp"
+        android:background="@drawable/shape_border_button">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trung tâm hỗ trợ / Điều khoản"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:background="@drawable/shadow_button_layer_list"
+            app:backgroundTint="@null"
+            android:textAllCaps="false"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất tài khoản"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shadow_button_logout"
+            app:backgroundTint="@null"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
