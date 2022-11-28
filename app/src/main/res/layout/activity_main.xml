@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".MainActivity">
-        
+
 
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -18,7 +18,111 @@
             app:itemIconTint="@color/black"
             app:itemTextColor="@color/gray"
             android:background="@drawable/navigation_custom"
+            app:backgroundTint="@null"
             app:menu="@menu/bottom_navigation">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="230dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@drawable/menu">
+
+                                </ImageView>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                        <Button
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginRight="50dp"
+                                            android:background="@drawable/custom_buton_login_mainactiviti"
+                                            android:text="Đăng nhập"
+                                            android:textColor="@color/black"
+                                            app:backgroundTint="@null">
+
+                                        </Button>
+
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:src="@drawable/account">
+
+                                        </ImageView>
+
+                                </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="65dp"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What's up, quý khách"></TextView>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_width="wrap_content"
+                    android:textSize="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="DIDU CLUB - LOCAL BRAND"></TextView>
+                <LinearLayout
+                    android:layout_marginTop="170dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:weightSum="10">
+                        <EditText
+                            android:paddingLeft="10dp"
+                            android:drawableLeft="@drawable/ic_baseline_search_24"
+                            android:layout_weight="7"
+                            android:height="50dp"
+                            app:backgroundTint="@null"
+                            android:background="@drawable/custom_search_mainactivity"
+                            android:layout_width="wrap_content"
+                            android:hint="Tìm kiếm/ Tra cứu sản phẩm"
+                            android:layout_height="wrap_content">
+
+                        </EditText>
+                        <ImageView
+                            android:layout_weight="3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/filter">
+
+                        </ImageView>
+
+                </LinearLayout>
+
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
