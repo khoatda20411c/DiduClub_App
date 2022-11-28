@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountSettingFragment"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left">
+
+        <ImageView
+            android:id="@+id/imv_Back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_round_arrow_circle_left_24"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_baseline_account_circle_24"/>
+
+    <TextView
+        android:id="@+id/txt_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cài đặt tài khoản"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_ChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shadow_button_layer_list"
+        android:drawableLeft="@drawable/ic_baseline_password_24"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:text="   Thay đổi mật khẩu"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textAlignment="textStart"
+        app:backgroundTint="@null"
+        android:textAllCaps="false"
+        android:paddingHorizontal="20dp"/>
+
+    <Button
+        android:id="@+id/btn_AddressInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="   Thông tin về địa chỉ"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:drawableLeft="@drawable/ic_baseline_add_location_24"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:background="@drawable/shadow_button_layer_list"
+        app:backgroundTint="@null"
+        android:textAllCaps="false"
+        android:paddingHorizontal="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btn_BankAndWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="   Ngân hàng / Ví điện tử"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:drawableLeft="@drawable/ic_baseline_account_balance_24"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:background="@drawable/shadow_button_layer_list"
+        app:backgroundTint="@null"
+        android:textAllCaps="false"
+        android:paddingHorizontal="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btn_ChangePIN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="   Thay đổi mã PIN"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:drawableLeft="@drawable/ic_baseline_pin_24"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:backgroundTint="@null"
+        android:textAllCaps="false"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/shadow_button_layer_list"/>
+
+</LinearLayout>

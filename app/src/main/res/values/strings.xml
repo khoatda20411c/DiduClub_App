@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DiduClub_App</string>
+    <string name="login" formatted="true">Đăng nhập</string>
+    <string name="thongtincanhan">Thông tin cá nhân</string>
+    <string name="lichsudonhang">Lịch sử đơn hàng</string>
+    <string name="danhsachvoucher">Danh sách voucher</string>
+    <string name="caidattaikhoan">Cài đặt tài khoản</string>
+    <string name="trungtamhotro">Trung tâm hỗ trợ / Điều khoản</string>
+    <string name="logout">Đăng xuất tài khoản</string>
 </resources>

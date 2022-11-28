@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddressInfoActivity"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start">
+
+        <ImageView
+            android:id="@+id/imv_Back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_round_arrow_circle_left_24"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_baseline_add_location_24"/>
+
+    <TextView
+        android:id="@+id/txt_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin về địa chỉ"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txt_CountAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ #1:"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp"
+        android:background="@drawable/shadow_button_layer_list">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên người nhận"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/txt_ReceiverName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tạ Kế Phúc"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_weight="0.8"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp"
+        android:background="@drawable/shadow_button_layer_list">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SĐT"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/txt_PhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0987.123.456"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_weight="0.8"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp"
+        android:background="@drawable/shadow_button_layer_list">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ nhận hàng hiện tại"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/txt_CurrentAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số 331, Quốc lộ 1A, Khu phố 3, Phường Linh Xuân, Tp. Thủ Đức, TP. HCM"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_weight="0.8"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/btn_ChangeAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thay đổi địa chỉ"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shadow_button_logout"
+            app:backgroundTint="@null"
+            android:textAllCaps="false"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/btn_InputNewAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+ Thêm địa chỉ mới"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:background="@drawable/shadow_button_layer_list"
+            app:backgroundTint="@null"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
