@@ -6,12 +6,40 @@
     android:layout_height="match_parent"
 
     tools:context=".ProductinfomationActivity">
+
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="380dp"
-        android:src="@drawable/img">
+        android:scaleX="1.1"
+        android:src="@drawable/wauwau">
 
     </ImageView>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_marginLeft="360dp"
+        android:layout_marginTop="240dp"
+        android:layout_height="40dp"
+        android:src="@drawable/love">
+
+    </ImageView>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_marginLeft="360dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="40dp"
+        android:src="@drawable/store">
+
+    </ImageView>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_arrow_back_24">
+
+    </ImageView>
+
     <RelativeLayout
         android:background="@drawable/custom_informationinfo"
         app:backgroundTint="@null"
@@ -35,27 +63,176 @@
             android:textStyle="bold"
             android:textSize="16dp"
             android:layout_marginTop="40dp"
-            android:text="Didu pha phach">
+            android:text="Áo phông">
 
         </TextView>
 
         <RatingBar
-            android:layout_width="230dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
 
-            android:layout_marginLeft="140dp"
 
-            android:layout_marginTop="30dp"
+
+            android:layout_marginTop="60dp"
+            android:rating="4"
+            android:scaleX=".8"
+            android:scaleY=".8"
 
             android:isIndicator="true"
             android:numStars="5"
-            android:rating="4"
-            android:scaleX=".5"
-            android:scaleY=".5"
+
             android:text="Widget.DeviceDefault.Light.RatingBar.Small">
 
         </RatingBar>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Xem them danh gia >">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="230dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="70dp"
+            android:text="Sản phẩm còn hàng">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="100dp"
+            android:text="Xem them danh gia">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="120dp"
+            android:text="Kích cỡ">
+
+        </TextView>
+        <Button
+            app:backgroundTint="@null"
+            android:background="@drawable/custom_button_info"
+            android:text="S"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="60dp"
+            android:layout_marginTop="170dp"
+            android:layout_height="60dp">
+
+        </Button>
+        <Button
+            app:backgroundTint="@null"
+            android:background="@drawable/custom_button_info"
+            android:text="M"
+            android:layout_marginLeft="80dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="60dp"
+            android:layout_marginTop="170dp"
+            android:layout_height="60dp">
+
+        </Button>
+        <Button
+            app:backgroundTint="@null"
+            android:background="@drawable/custom_button_info"
+            android:text="L"
+            android:layout_marginLeft="160dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="60dp"
+            android:layout_marginTop="170dp"
+            android:layout_height="60dp">
+
+        </Button>
+        <Button
+            app:backgroundTint="@null"
+            android:background="@drawable/custom_button_info"
+            android:text="XL"
+            android:layout_marginLeft="240dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="60dp"
+            android:layout_marginTop="170dp"
+            android:layout_height="60dp">
+
+        </Button>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Giá bán">
+
+        </TextView>
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="290dp"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:text="325.000 VND">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="270dp"
+                android:layout_marginLeft="180dp"
+                android:text="SALE 25% OFF">
+
+            </TextView>
+            <ImageView
+                android:layout_marginTop="250dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sale_icon">
+
+            </ImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="350dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:text="Mua ngay"
+                android:background="@drawable/shape_radius_button"
+                android:layout_height="wrap_content">
+
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:backgroundTint="@null"
+                android:background="@drawable/shape_radius_button"
+                android:text="Thêm vào giỏ hàng"
+                android:layout_marginLeft="40dp"
+                android:layout_height="wrap_content">
+
+            </Button>
+        </LinearLayout>
 
     </RelativeLayout>
 
