@@ -52,7 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nhập password"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,7 +72,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Mã pin hiện tại"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -83,12 +85,14 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="Nhập mã pin mới"/>
+
             <EditText
                 android:id="@+id/edt_Pinmoi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nhập mã pin"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,26 +104,29 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="Nhập lại mã pin"/>
+
             <EditText
                 android:id="@+id/edt_Pinnhaplai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nhập lại mã pin"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
         </LinearLayout>
 
     </LinearLayout>
 
     <Button
         android:id="@+id/btn_Luuthaydoi_Pin"
-        android:layout_margin="10dp"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:backgroundTint="@color/black"
-        android:textColor="#FFFFFF"
+        android:layout_margin="10dp"
+        android:background="@drawable/shadow_button_layer_list"
+        android:minHeight="48dp"
         android:text="Lưu thay đổi mã PIN"
-        android:background="@drawable/shadow_button_layer_list" >
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@color/black">
 
     </Button>
 
