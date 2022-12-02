@@ -8,9 +8,25 @@
     <string name="trungtamhotro">Trung tâm hỗ trợ / Điều khoản</string>
     <string name="logout">Đăng xuất tài khoản</string>
     <string name="large_text"></string>
-    <string name="forgetpassword"><u>Quên mật khẩu?</u>
+    <string name="forgetpassword"><u>Quên mật khẩu?</u></string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    </string>
-<!--    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;-->
-<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <!-- Frequently asked questions -->
+    <string name="Question1"><u>[Thành viên mới] Quy trình trả hàng hoàn tiền ?</u></string>
+    <string name="Question2"><u>[Thành viên mới] Cách theo dõi tình trạng vận chuyển của đơn hàng?</u></string>
+    <string name="Question3"><u>[Thành viên mới] Làm sao để mua hàng / đặt hàng trên ứng dụng ?</u></string>
+    <string name="Question4"><u>[Đơn hàng] Tôi phải làm gì nếu đơn hàng bị cập nhật sai trạng thái/chưa nhận được hàng?</u></string>
+    <string name="Question5"><u>[Lỗi] Tại sao tài khoản của tôi bị khóa/bị giới hạn?</u></string>
+    <string name="Question6"><u>[Tài khoản] Tại sao tôi không nhận được Mã xác thực OTP?</u></string>
+    <string name="Question7"><u>[Thông tin vận chuyển] Làm sao để liên hệ Đơn vị vận chuyển/tra cứu thông tin vận chuyển/hối giao hàng?</u></string>
+    <string name="Question8"><u>[Cảnh báo lừa đảo] Nên và không nên làm để tránh nhận phải đơn hàng ảo/giả mạo ?</u></string>
+
+    <!-- General information questions -->
+    <string name="G_Question1"><u>Chính sách bảo mật</u></string>
+    <string name="G_Question2"><u>Điều khoản và dịch vụ</u></string>
+    <string name="G_Question3"><u>Dịch vụ giảm chi phí vận chuyển</u></string>
+    <string name="G_Question4"><u>Chính sách bảo mật</u></string>
+    <string name="G_Question5"><u>Chính sách trả hàng và hoàn tiền</u></string>
+
+
 </resources>
