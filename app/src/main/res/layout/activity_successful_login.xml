@@ -52,7 +52,7 @@
             android:paddingHorizontal="20dp"
             app:backgroundTint="@null"
             android:textAllCaps="false" />
-        
+
     </LinearLayout>
 
 </LinearLayout>
