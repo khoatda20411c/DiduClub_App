@@ -144,6 +144,6 @@
         android:text="Huỷ"
         android:textColor="@color/white"
         app:backgroundTint="@color/black" />
-    
+
 
 </LinearLayout>
