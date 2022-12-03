@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/custom_itemsanphamgiohang"
+    android:layout_height="200dp">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+
+        android:layout_marginTop="70dp"
+        android:layout_height="wrap_content">
+
+    </CheckBox>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+
+        android:src="@drawable/img">
+
+    </ImageView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_delete_24">
+
+    </ImageView>
+    <TextView
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="230dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="26dp"
+        app:backgroundTint="@null"
+        android:padding="10dp"
+        android:background="@drawable/custom_itemsanphamgiohang"
+        android:text="325.000">
+
+    </TextView>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        app:backgroundTint="@null"
+        android:background="@drawable/custom_itemsanphamgiohang"
+        android:layout_marginLeft="70dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            android:textColor="@color/black"
+            android:text="Di du pha phach">
+
+        </TextView>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Di du pha phach">
+
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/custom_itemsanphamgiohang">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/minus">
+
+        </ImageView>
+        <TextView
+            android:gravity="center"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:text="1"></TextView>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24">
+
+        </ImageView>
+
+    </LinearLayout>
+
+</RelativeLayout>

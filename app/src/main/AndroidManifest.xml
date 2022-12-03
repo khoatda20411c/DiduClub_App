@@ -22,6 +22,30 @@
         </activity>
 
         <activity
+            android:name=".Allhistoryfragment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".WaitingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".fragment_main"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
             android:name=".SuppportCenterActivity"
             android:exported="false">
             <meta-data
@@ -36,6 +60,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".Edit_Information_Activity"
             android:exported="false">
@@ -51,6 +76,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".NotLoginNotiFragment"
             android:exported="false">
