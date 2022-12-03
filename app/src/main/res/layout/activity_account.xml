@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shadow_button_layer_list"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/imv_AccountAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/_11345218_1265228644277602_2446569094166920773_n" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_AccountName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Tạ Kế Phúc"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_AccountEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="right"
+                android:text="ongtrumandroid123@gmail.com"
+                android:textColor="#727272"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_AccountRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="right"
+                android:text="Thành viên Vàng"
+                android:textColor="#727272"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_AccountPoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_baseline_celebration_24"
+                android:gravity="right"
+                android:text="Tích lũy: 21000 điểm  "
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_border_button"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="20dp">
+
+        <Button
+            android:id="@+id/btn_PersonalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shadow_button_layer_list"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:paddingHorizontal="20dp"
+            android:text="   Thông tin cá nhân"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btn_PaymentOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shadow_button_layer_list"
+            android:drawableLeft="@drawable/ic_baseline_history_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:paddingHorizontal="20dp"
+            android:text="   Lịch sử đơn hàng"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btn_VoucherList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shadow_button_layer_list"
+            android:drawableLeft="@drawable/ic_baseline_card_giftcard_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:paddingHorizontal="20dp"
+            android:text="   Danh sách voucher"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btn_AccountSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_button_layer_list"
+            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:paddingHorizontal="20dp"
+            android:text="   Cài đặt tài khoản"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_border_button"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="20dp">
+
+        <Button
+            android:id="@+id/btn_SupportAndRule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shadow_button_layer_list"
+            android:text="Trung tâm hỗ trợ / Điều khoản"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btn_Logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shadow_button_logout"
+            android:text="Đăng xuất tài khoản"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+</LinearLayout>

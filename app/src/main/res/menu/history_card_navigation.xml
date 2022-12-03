@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/sale_icon"
+        android:id="@+id/tatca"
+        android:title="Tất cả"
+
+        />
+    <item
+        android:icon="@drawable/sale_icon"
+        android:id="@+id/choxacnhan"
+        android:title="Chờ xác nhận"
+
+        />
+    <item
+        android:id="@+id/danggiao"
+        android:title="Đang giao"
+        >
+
+    </item>
+    <item
+        android:id="@+id/danhan"
+        android:title="Đã nhận"
+        >
+
+    </item>
+    <item
+        android:id="@+id/dahuy"
+        android:title="Đã hủy"
+        >
+
+    </item>
+
+</menu>

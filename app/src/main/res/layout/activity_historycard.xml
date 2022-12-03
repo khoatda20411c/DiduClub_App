@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistorycardActivity">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24">
+
+            </ImageView>
+            <TextView
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Lịch sử đơn hàng">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <fragment
+        android:layout_marginTop="110dp"
+        android:id="@+id/fragment_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        class="com.nhom3.diduclub_app.Allhistoryfragment"
+        tools:layout="@layout/fragment_allhistoryfragment">
+
+    </fragment>
+
+</RelativeLayout>
