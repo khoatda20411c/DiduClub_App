@@ -16,7 +16,7 @@
         android:gravity="start">
 
         <ImageView
-            android:id="@+id/imv_Back"
+            android:id="@+id/imv_Back_activity_address_info"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/ic_round_arrow_circle_left_24"
@@ -30,7 +30,6 @@
         android:src="@drawable/ic_baseline_add_location_24"/>
 
     <TextView
-        android:id="@+id/txt_Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Thông tin về địa chỉ"
@@ -41,7 +40,7 @@
         android:gravity="center"/>
 
     <TextView
-        android:id="@+id/txt_CountAddress"
+        android:id="@+id/txt_CountAddress_activity_address_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Địa chỉ #1:"
@@ -67,7 +66,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/txt_ReceiverName"
+            android:id="@+id/txt_ReceiverName_activity_address_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tạ Kế Phúc"
@@ -95,7 +94,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/txt_PhoneNumber"
+            android:id="@+id/txt_PhoneNumber_activity_address_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="0987.123.456"
@@ -123,7 +122,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/txt_CurrentAddress"
+            android:id="@+id/txt_CurrentAddress_activity_address_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Số 331, Quốc lộ 1A, Khu phố 3, Phường Linh Xuân, Tp. Thủ Đức, TP. HCM"
@@ -140,7 +139,7 @@
         android:gravity="bottom">
 
         <Button
-            android:id="@+id/btn_ChangeAddress"
+            android:id="@+id/btn_ChangeAddress_activity_address_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thay đổi địa chỉ"
@@ -152,7 +151,7 @@
             android:layout_marginBottom="5dp"/>
 
         <Button
-            android:id="@+id/btn_InputNewAddress"
+            android:id="@+id/btn_InputNewAddress_activity_address_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="+ Thêm địa chỉ mới"

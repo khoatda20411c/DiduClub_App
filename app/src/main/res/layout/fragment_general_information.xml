@@ -54,7 +54,7 @@
                 android:layout_marginBottom="5dp">
 
                 <TextView
-                    android:id="@+id/txt_G_Question1"
+                    android:id="@+id/txt_G_Question1_fragment_general_information"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/G_Question1"
@@ -62,7 +62,7 @@
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
-                    android:id="@+id/txt_G_Question2"
+                    android:id="@+id/txt_G_Question2_fragment_general_information"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/G_Question2"
@@ -70,7 +70,7 @@
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
-                    android:id="@+id/txt_G_Question3"
+                    android:id="@+id/txt_G_Question3_fragment_general_information"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/G_Question3"
@@ -78,7 +78,7 @@
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
-                    android:id="@+id/txt_G_Question4"
+                    android:id="@+id/txt_G_Question4_fragment_general_information"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/G_Question4"
@@ -86,7 +86,7 @@
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
-                    android:id="@+id/txt_G_Question5"
+                    android:id="@+id/txt_G_Question5_fragment_general_information"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/G_Question5"

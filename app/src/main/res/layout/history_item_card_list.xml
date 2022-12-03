@@ -15,7 +15,7 @@
 
 
         <TextView
-            android:id="@+id/txt_ProductName"
+            android:id="@+id/txt_ProductName_history_item_card_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Didu Phá Phách"
@@ -25,7 +25,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/txt_Date"
+            android:id="@+id/txt_Date_history_item_card_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="04/11/2022"
@@ -55,7 +55,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/txt_ProductNumber"
+            android:id="@+id/txt_ProductNumber_history_item_card_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="03"
@@ -80,7 +80,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/txt_ProductColor"
+            android:id="@+id/txt_ProductColor_history_item_card_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hồng"
@@ -105,7 +105,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/txt_ProductSize"
+            android:id="@+id/txt_ProductSize_history_item_card_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="S"
@@ -130,7 +130,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/txt_ProductTotalPrice"
+            android:id="@+id/txt_ProductTotalPrice_history_item_card_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="500000"
@@ -154,7 +154,7 @@
         android:padding="10dp">
 
         <Button
-            android:id="@+id/btn_DetailCard"
+            android:id="@+id/btn_DetailCard_history_item_card_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chi tiết"
@@ -162,7 +162,7 @@
             android:background="@drawable/shape_radius_button_homepage"/>
 
         <TextView
-            android:id="@+id/txt_Status"
+            android:id="@+id/txt_Status_history_item_card_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Đã nhận hàng"

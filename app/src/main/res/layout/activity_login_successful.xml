@@ -40,7 +40,7 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/btn_GoToHomePage"
+            android:id="@+id/btn_GoToHomePage_activity_login_successful"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"

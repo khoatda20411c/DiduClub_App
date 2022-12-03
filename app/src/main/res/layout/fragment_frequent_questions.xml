@@ -33,7 +33,7 @@
 
 
             <TextView
-                android:id="@+id/txt_Question1"
+                android:id="@+id/txt_Question1_fragment_frequent_questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Question1"
@@ -41,7 +41,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <TextView
-                android:id="@+id/txt_Question2"
+                android:id="@+id/txt_Question2_fragment_frequent_questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Question2"
@@ -49,7 +49,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <TextView
-                android:id="@+id/txt_Question3"
+                android:id="@+id/txt_Question3_fragment_frequent_questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Question3"
@@ -57,7 +57,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <TextView
-                android:id="@+id/txt_Question4"
+                android:id="@+id/txt_Question4_fragment_frequent_questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Question4"
@@ -65,7 +65,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <TextView
-                android:id="@+id/txt_Question5"
+                android:id="@+id/txt_Question5_fragment_frequent_questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Question5"
@@ -73,7 +73,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <TextView
-                android:id="@+id/txt_Question6"
+                android:id="@+id/txt_Question6_fragment_frequent_questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Question6"
@@ -81,7 +81,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <TextView
-                android:id="@+id/txt_Question7"
+                android:id="@+id/txt_Question7_fragment_frequent_questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Question7"
@@ -89,7 +89,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <TextView
-                android:id="@+id/txt_Question8"
+                android:id="@+id/txt_Question8_fragment_frequent_questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Question8"

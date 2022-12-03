@@ -15,7 +15,7 @@
         android:gravity="left">
 
         <ImageView
-            android:id="@+id/imv_Back"
+            android:id="@+id/imv_Back_fragment_account_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/ic_round_arrow_circle_left_24"
@@ -40,7 +40,7 @@
         android:gravity="center"/>
 
     <Button
-        android:id="@+id/btn_ChangePassword"
+        android:id="@+id/btn_ChangePassword_fragment_account_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -56,7 +56,7 @@
         android:paddingHorizontal="20dp"/>
 
     <Button
-        android:id="@+id/btn_AddressInfo"
+        android:id="@+id/btn_AddressInfo_fragment_account_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="   Thông tin về địa chỉ"
@@ -72,7 +72,7 @@
         android:layout_marginBottom="20dp"/>
 
     <Button
-        android:id="@+id/btn_BankAndWallet"
+        android:id="@+id/btn_BankAndWallet_fragment_account_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="   Ngân hàng / Ví điện tử"
@@ -88,7 +88,7 @@
         android:layout_marginBottom="20dp"/>
 
     <Button
-        android:id="@+id/btn_ChangePIN"
+        android:id="@+id/btn_ChangePIN_fragment_account_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="   Thay đổi mã PIN"
