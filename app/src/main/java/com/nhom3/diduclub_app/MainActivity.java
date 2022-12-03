@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fragment_main fragmentmain=(com.nhom3.diduclub_app.fragment_main) getFragmentManager().findFragmentById(R.id.fragment_main);
+        fragment_main fragmentmain = (com.nhom3.diduclub_app.fragment_main) getFragmentManager().findFragmentById(R.id.fragment_main);
 
     }
 }
