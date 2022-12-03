@@ -36,6 +36,7 @@
 
     </TextView>
     <EditText
+        android:id="@+id/edt_Username_activity_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableRight="@drawable/ic_baseline_check_24"
@@ -53,6 +54,7 @@
 
     </TextView>
     <EditText
+        android:id="@+id/edt_Email_activity_register"
         android:drawableRight="@drawable/ic_baseline_check_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,7 +72,7 @@
 
     </TextView>
     <EditText
-
+        android:id="@+id/edt_Password_activity_register"
         android:drawableRight="@drawable/hidden"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,6 +91,7 @@
 
     </TextView>
     <EditText
+        android:id="@+id/edt_RetypePassword_activity_register"
         android:drawableRight="@drawable/hidden"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -101,11 +104,13 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:orientation="horizontal">
+
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
         </CheckBox>
+
         <TextView
             android:textSize="18dp"
             android:layout_width="match_parent"
@@ -114,7 +119,9 @@
 
         </TextView>
     </LinearLayout>
+
     <Button
+        android:id="@+id/btn_Register_activity_register"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -123,6 +130,5 @@
         android:text="Đăng ký">
 
     </Button>
-
 
 </LinearLayout>

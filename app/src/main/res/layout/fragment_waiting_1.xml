@@ -66,6 +66,7 @@
 
         </TextView>
         <ImageView
+            android:id="@+id/imv_Next_fragment_waiting_1"
             android:layout_width="50dp"
             android:layout_marginLeft="350dp"
             android:src="@drawable/ic_baseline_arrow_forward_24"

@@ -13,9 +13,9 @@
             android:layout_margin="30dp"
             app:cardCornerRadius="50dp"
             android:layout_height="wrap_content">
+
             <ImageView
-
-
+                android:id="@+id/imv_HotProductThumb_fragment_main"
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
                 app:cardCornerRadius="10dp"
@@ -25,13 +25,7 @@
 
             </ImageView>
 
-
         </androidx.cardview.widget.CardView>
-
-
-
-
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -61,12 +55,12 @@
         </RelativeLayout>
 
         <GridView
+            android:id="@+id/gv_HotProduct_fragment_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:numColumns="2">
 
         </GridView>
-
 
     </LinearLayout>
 
