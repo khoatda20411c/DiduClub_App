@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".MainActivity">
+
         <fragment
             android:layout_marginTop="230dp"
             android:id="@+id/fragment_main"
@@ -15,9 +16,6 @@
             tools:layout="@layout/fragment_main">
 
         </fragment>
-
-
-
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
