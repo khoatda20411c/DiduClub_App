@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".Edit_Information_Activity"
     android:padding="15dp"
     android:orientation="vertical">
@@ -43,6 +47,8 @@
             android:textColor="@color/black"/>
 
         <EditText
+            android:id="@+id/edt_Name_EditInformation"
+            android:hint="Nhập tên của bạn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -68,11 +74,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <RadioButton
+                android:id="@+id/rad_Nam_EditInformation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nam"
                 android:layout_marginRight="20dp"/>
             <RadioButton
+                android:id="@+id/rad_Nu_EditInformation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nữ"/>
@@ -99,9 +107,10 @@
             android:textColor="@color/black"/>
 
         <EditText
-            android:id="@+id/txt_Edit_SDT"
+            android:id="@+id/txt_EditSDT_EditInformation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="Nhập số điện thoại"/>
     </LinearLayout>
     <LinearLayout
         android:layout_marginLeft="50dp"
@@ -119,13 +128,16 @@
             android:layout_height="wrap_content"
             android:text="Ngày sinh"
             android:textColor="@color/black"/>
-
-        <DatePicker
+        <EditText
+            android:id="@+id/edt_NgaySinh_EditInformation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="Nhập ngày sinh"/>
+
+
     </LinearLayout>
     <Button
-        android:id="@+id/btn_LuuCacThayDoi"
+        android:id="@+id/btn_LuuCacThayDoi_EditInformation"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -135,7 +147,7 @@
         android:textColor="@color/white"
         app:backgroundTint="@color/black" />
     <Button
-        android:id="@+id/btn_Huy"
+        android:id="@+id/btn_Huy_EditInformation"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -147,3 +159,4 @@
 
 
 </LinearLayout>
+</ScrollView>
