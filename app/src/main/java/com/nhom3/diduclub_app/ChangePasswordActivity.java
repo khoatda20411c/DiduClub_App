@@ -30,7 +30,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
         imvHint2_activity_change_password = findViewById(R.id.imv_Hint2_activity_change_password);
 
         btnConfirm_activity_change_password = findViewById(R.id.btn_Confirm_activity_change_password);
-
     }
 
     private void addEvents() {

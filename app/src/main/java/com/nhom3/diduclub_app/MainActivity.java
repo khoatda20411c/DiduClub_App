@@ -19,17 +19,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         fragment_main fragmentmain = (com.nhom3.diduclub_app.fragment_main) getFragmentManager().findFragmentById(R.id.fragment_main);
         //Gọi hàm Copy CSDL từ assets vào thư mục Databases
         processCopy();
         // Mở CSDL lên để dùng
         database = openOrCreateDatabase("Diduclub.db",MODE_PRIVATE, null);
-
     }
-
 
     private void processCopy() {
         File dbFile = getDatabasePath(DATABASE_NAME);
@@ -41,12 +39,11 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e) {
                 Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
             }
-
         }
     }
 
     private String getDatabasePath() {
-        return getApplicationInfo().dataDir + DB_PATH_SUFFIX+ DATABASE_NAME;
+        return getApplicationInfo().dataDir + DB_PATH_SUFFIX + DATABASE_NAME;
     }
 
     public void CopyDataBaseFromAsset() {

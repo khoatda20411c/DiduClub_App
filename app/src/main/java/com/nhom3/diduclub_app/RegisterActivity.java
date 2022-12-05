@@ -31,7 +31,6 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister_activity_register = findViewById(R.id.btn_Register_activity_register);
 
         chkAccept_activity_register = findViewById(R.id.chk_Accept_activity_register);
-
     }
 
     private void addEvents() {

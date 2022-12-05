@@ -16,6 +16,7 @@
         android:textColor="@color/black"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="25dp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,6 +26,7 @@
         android:layout_marginLeft="25dp"/>
 
     <EditText
+        android:id="@+id/edt_Username_activity_loginmethod"
         android:layout_width="387dp"
         android:layout_gravity="center"
         android:hint="Tên đăng nhập"
@@ -34,7 +36,9 @@
         android:layout_marginTop="50dp"
         android:backgroundTint="#838080"
         android:drawableLeft="@drawable/ic_baseline_person_24"/>
+
     <EditText
+        android:id="@+id/edt_Password_activity_loginmethod"
         android:layout_width="387dp"
         android:layout_gravity="center"
         android:hint="Mật khẩu"
@@ -43,8 +47,9 @@
         android:backgroundTint="#838080"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_baseline_key_24"/>
+
     <TextView
-        android:id="@+id/txt_ForgotPass"
+        android:id="@+id/txt_ForgotPass_activity_loginmethod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#838080"
@@ -55,6 +60,7 @@
         android:gravity="right"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Login_activity_loginmethod"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:background="@drawable/round_btn"
@@ -64,6 +70,7 @@
         android:textStyle="bold"
         android:textColor="@color/white"
         android:text="Đăng nhập"/>
+
     <View
         android:layout_width="360dp"
         android:layout_height="0.3dp"
@@ -72,6 +79,7 @@
         android:layout_gravity="center"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_LoginWithFacebook_activity_loginmethod"
         android:layout_width="337dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -82,7 +90,9 @@
         android:paddingHorizontal="60dp"
         android:text="Tiếp tục với Facebook"
         android:textStyle="bold"/>
+
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_LoginWithGoogle_activity_loginmethod"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:background="@drawable/stroke_btn"
@@ -93,4 +103,5 @@
         android:paddingHorizontal="70dp"
         android:textStyle="bold"
         android:text="Tiếp tục với Google"/>
+
 </LinearLayout>
