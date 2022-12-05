@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_filter_layout"
+            android:orientation="vertical"
+            android:paddingBottom="40dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Theo danh mục"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btn_Tshirt_FilterProductActivity"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text="Áo thun"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <Button
+                    android:id="@+id/btn_Sweater_FilterProductActivity"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text="Áo Sweater"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_Polo_FilterProductActivity"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text="Áo Polo"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <Button
+                    android:id="@+id/btn_Hoodie_FilterProductActivity"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text="Áo Hoodie"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_filter_layout"
+            android:orientation="vertical"
+            android:paddingBottom="40dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Theo kích cỡ"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_S_FilterProductActivity"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text="S"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_M_FilterProductActivity"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/custom_filter_button"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@null"
+                    android:text="M"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_L_FilterProductActivity"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text="L"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_XL_FilterProductActivity"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text="XL"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_XXL_FilterProductActivity"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text="XXL"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_filter_layout"
+            android:orientation="vertical"
+            android:paddingBottom="0dp"
+            android:layout_marginBottom="40dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Theo khoảng giá"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:weightSum="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/custom_filter_button"
+                    android:padding="20dp">
+
+                    <EditText
+                        android:id="@+id/edt_MinPrice_FilterProductActivity"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="50dp"
+                        android:hint="TỐI THIỂU"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:background="@drawable/custom_filter_button_white"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:text="-"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+
+                    <EditText
+                        android:id="@+id/edt_MaxPrice_FilterProductActivity"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="50dp"
+                        android:hint="TỐI ĐA"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:background="@drawable/custom_filter_button_white"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:weightSum="3.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp">
+
+                <Button
+                    android:id="@+id/btn_Less100_FilterProductActivity"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text=" 100K"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_100To200_FilterProductActivity"
+                    android:layout_weight="1.5"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text="100K - 200K"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+
+
+                <Button
+                    android:id="@+id/btn_More300_FilterProductActivity"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/custom_filter_button"
+                    app:backgroundTint="@null"
+                    android:text="> 300K"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Theo màu sắc"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/custom_filter_button"
+                    android:padding="20dp">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rad_Black_FilterProductActivity"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/custom_checkbox_black"
+                            android:button="@drawable/custom_checkbox_black" />
+
+                        <RadioButton
+                            android:id="@+id/rad_White_FilterProductActivity"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="10dp"
+                            android:button="@drawable/custom_checkbox_white"
+                            android:background="@drawable/custom_checkbox_white"/>
+
+                        <RadioButton
+                            android:id="@+id/rad_Green_FilterProductActivity"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/custom_checkbox_green"
+                            android:button="@drawable/custom_checkbox_green" />
+
+                        <RadioButton
+                            android:id="@+id/rad_Blue_FilterProductActivity"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/custom_checkbox_blue"
+                            android:button="@drawable/custom_checkbox_blue" />
+
+                        <RadioButton
+                            android:id="@+id/rad_Brown_FilterProductActivity"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/custom_checkbox_brown"
+                            android:button="@drawable/custom_checkbox_brown" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_Apply_FilterProductActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_filter_button_black"
+                app:backgroundTint="@null"
+                android:text="Áp dụng"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_Reset_FilterProductActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_filter_button_black_border"
+                app:backgroundTint="@null"
+                android:text="Thiết lập lại"
+                android:textColor="#000"
+                android:gravity="center"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

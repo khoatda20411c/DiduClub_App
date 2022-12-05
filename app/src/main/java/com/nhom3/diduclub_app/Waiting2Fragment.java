@@ -25,6 +25,7 @@ public class Waiting2Fragment extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Waiting2Fragment.this, BeforeLoginActivity.class);
                 startActivity(intent);
+
             }
         });
     }

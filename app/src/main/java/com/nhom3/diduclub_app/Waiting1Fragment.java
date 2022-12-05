@@ -27,6 +27,7 @@ public class Waiting1Fragment extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Waiting1Fragment.this, Waiting2Fragment.class);
                 startActivity(intent);
+
             }
         });
     }
