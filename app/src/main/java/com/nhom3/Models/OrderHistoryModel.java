@@ -3,16 +3,16 @@ package com.nhom3.Models;
 import java.io.Serializable;
 
 public class OrderHistoryModel implements Serializable {
-    String Orhis_ID;
-    String Account_ID;
-    String Product_Name;
-    String Order_ID;
-    String Order_Time;
-    int Product_Quantity;
-    String Product_Color;
-    String Size;
-    double Total_Price;
-    String Category;
+    private String Orhis_ID;
+    private String Account_ID;
+    private String Product_Name;
+    private String Order_ID;
+    private String Order_Time;
+    private int Product_Quantity;
+    private String Product_Color;
+    private String Size;
+    private double Total_Price;
+    private String Category;
 
     public OrderHistoryModel(String orhis_ID, String account_ID, String product_Name, String order_ID, String order_Time, int product_Quantity, String product_Color, String size, double total_Price, String category) {
         Orhis_ID = orhis_ID;
