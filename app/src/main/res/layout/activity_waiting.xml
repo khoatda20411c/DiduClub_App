@@ -4,9 +4,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/layoutwaiting_container"
+
     android:layout_height="match_parent"
     tools:context=".WaitingActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="660dp"
+        android:id="@+id/layoutwaiting_container">
+
+    </RelativeLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        app:itemTextColor="@color/white"
+        android:background="@drawable/navigation_custom"
+        app:backgroundTint="@null">
+
+        <TextView
+            android:id="@+id/txt_activity_waiting_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="1/3"
+            android:textSize="20dp"
+
+            android:textStyle="bold">
+
+        </TextView>
+        <ImageView
+            android:id="@+id/imv_Next_activity"
+            android:layout_width="50dp"
+            android:layout_marginLeft="350dp"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            android:layout_height="50dp">
+
+        </ImageView>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 

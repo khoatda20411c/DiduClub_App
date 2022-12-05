@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment_0"
+    android:id="@+id/fragmentwaiting_0"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
         android:layout_width="match_parent"
@@ -44,35 +44,7 @@
         android:text="Publish up your selfies to make yourself more beautiful with this app">
 
     </TextView>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
 
-        android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_height="wrap_content"
-        app:itemTextColor="@color/white"
-        android:background="@drawable/navigation_custom"
-        app:backgroundTint="@null">
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="1/3"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-
-            android:layout_height="wrap_content">
-
-        </TextView>
-        <ImageView
-            android:id="@+id/imv_Next_activity_waiting"
-            android:layout_width="50dp"
-            android:layout_marginLeft="350dp"
-            android:src="@drawable/ic_baseline_arrow_forward_24"
-            android:layout_height="50dp">
-
-        </ImageView>
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </RelativeLayout>
