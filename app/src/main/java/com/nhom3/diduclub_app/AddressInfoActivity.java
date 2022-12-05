@@ -2,7 +2,9 @@ package com.nhom3.diduclub_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,6 +13,7 @@ public class AddressInfoActivity extends AppCompatActivity {
     ImageView imvBack_activity_address_info;
     TextView txtReceiverName_activity_address_info, txtPhoneNumber_activity_address_info, txtCurrentAddress_activity_address_info;
     Button btnChangeAddress_activity_address_info, btnInputNewAddress_activity_address_info;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,31 @@ public class AddressInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_address_info);
 
         linkViews();
+        addEvents();
+    }
+
+    private void addEvents() {
+        imvBack_activity_address_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(AddressInfoActivity.this, AccountSettingFragment.class);
+                startActivity(intent);
+            }
+        });
+
+        btnChangeAddress_activity_address_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        btnInputNewAddress_activity_address_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private void linkViews() {
