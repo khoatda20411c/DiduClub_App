@@ -28,6 +28,7 @@
 
     <fragment
         android:id="@+id/fragment_DiscountList_DiscountActivity"
+        android:name="com.nhom3.diduclub_app.DiscountFragment"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

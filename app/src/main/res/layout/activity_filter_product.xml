@@ -15,6 +15,7 @@
 
         <fragment
             android:id="@+id/fragment_FilterProduct_FilterProductActivity"
+            android:name="com.nhom3.diduclub_app.FilterProductFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_filter_product" />

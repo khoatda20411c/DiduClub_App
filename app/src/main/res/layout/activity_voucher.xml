@@ -10,6 +10,7 @@
 
     <fragment
         android:id="@+id/fragment_VoucherList_VoucherActivity"
+        android:name="com.nhom3.diduclub_app.VoucherFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout="@layout/fragment_voucher"/>
