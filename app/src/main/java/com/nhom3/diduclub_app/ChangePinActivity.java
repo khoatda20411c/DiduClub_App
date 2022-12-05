@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.view.View;
+
+
 import android.widget.Button;
 import android.widget.EditText;
 
 public class ChangePinActivity extends AppCompatActivity {
+
     EditText edtCurrentPassword_activity_change_pin, edtCurrentPin_activity_change_pin,
             edtPinNew_activity_change_pin, edtReTypeNewPin_activity_change_pin;
     Button btnSaveChangePin_activity_change_pin, btnCancelChangePin_activity_change_pin;
