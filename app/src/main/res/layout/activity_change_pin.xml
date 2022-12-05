@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Nhập password"
                 android:inputType="textPassword"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

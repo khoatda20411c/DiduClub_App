@@ -247,15 +247,33 @@
                 android:value="" />
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".Waiting1Fragment"
             android:exported="false">
+=======
+            android:name=".LoadingActivity"
+            android:exported="false">
+
+>>>>>>> 5a7ba48acc530068a9bd72ca287dd69ba2bee18b
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".Waiting2Fragment"
             android:exported="false">
+=======
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+>>>>>>> 5a7ba48acc530068a9bd72ca287dd69ba2bee18b
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
