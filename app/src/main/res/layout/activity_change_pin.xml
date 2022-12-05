@@ -49,7 +49,7 @@
                 />
 
             <EditText
-                android:id="@+id/edt_Password_ChangePin"
+                android:id="@+id/edt_CurrentPassword_activity_change_pin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nhập password"
@@ -69,7 +69,7 @@
                 android:textColor="@color/black" />
 
             <EditText
-                android:id="@+id/edt_PinNow_ChangePin"
+                android:id="@+id/edt_CurrentPin_activity_change_pin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Mã pin hiện tại"
@@ -88,7 +88,7 @@
                 android:text="Nhập mã pin mới"/>
 
             <EditText
-                android:id="@+id/edt_PinNew_ChangePin"
+                android:id="@+id/edt_PinNew_activity_change_pin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nhập mã pin mới"
@@ -107,7 +107,7 @@
                 android:text="Nhập lại mã pin"/>
 
             <EditText
-                android:id="@+id/edt_ReNewPin_ChangePin"
+                android:id="@+id/edt_ReTypeNewPin_activity_change_pin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nhập lại mã pin"
@@ -118,7 +118,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_Luuthaydoi_ChangePin"
+        android:id="@+id/btn_SaveChangePin_activity_change_pin"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -132,7 +132,7 @@
     </Button>
 
     <Button
-        android:id="@+id/btn_Huy_ChangePin"
+        android:id="@+id/btn_CancelChangePin_activity_change_pin"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

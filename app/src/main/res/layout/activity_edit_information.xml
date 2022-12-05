@@ -14,8 +14,6 @@
     android:padding="15dp"
     android:orientation="vertical">
 
-
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,11 +23,24 @@
         android:gravity="center"
         android:textColor="@color/black"/>
     <ImageView
+        android:id="@+id/imv_AccountAvatar_activity_edit_information"
         android:layout_margin="15dp"
         android:layout_width="200dp"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
         android:src="@drawable/wauwau"/>
+    <Button
+        android:id="@+id/btn_ChonAnh_activity_edit_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shadow_button_layer_list"
+        android:text="Chọn ảnh"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/ic_baseline_photo_camera_24"
+        app:backgroundTint="@color/white" />
     <LinearLayout
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
@@ -47,7 +58,7 @@
             android:textColor="@color/black"/>
 
         <EditText
-            android:id="@+id/edt_Name_EditInformation"
+            android:id="@+id/edt_Name_activity_edit_information"
             android:hint="Nhập tên của bạn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -74,13 +85,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <RadioButton
-                android:id="@+id/rad_Nam_EditInformation"
+                android:id="@+id/rad_Nam_activity_edit_information"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nam"
                 android:layout_marginRight="20dp"/>
             <RadioButton
-                android:id="@+id/rad_Nu_EditInformation"
+                android:id="@+id/rad_Nu_activity_edit_information"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nữ"/>
@@ -107,7 +118,7 @@
             android:textColor="@color/black"/>
 
         <EditText
-            android:id="@+id/txt_EditSDT_EditInformation"
+            android:id="@+id/edt_EditSDT_activity_edit_information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nhập số điện thoại"/>
@@ -129,7 +140,7 @@
             android:text="Ngày sinh"
             android:textColor="@color/black"/>
         <EditText
-            android:id="@+id/edt_NgaySinh_EditInformation"
+            android:id="@+id/edt_NgaySinh_activity_edit_information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nhập ngày sinh"/>
@@ -137,7 +148,7 @@
 
     </LinearLayout>
     <Button
-        android:id="@+id/btn_LuuCacThayDoi_EditInformation"
+        android:id="@+id/btn_LuuCacThayDoi_activity_edit_information"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -147,7 +158,7 @@
         android:textColor="@color/white"
         app:backgroundTint="@color/black" />
     <Button
-        android:id="@+id/btn_Huy_EditInformation"
+        android:id="@+id/btn_Huy_activity_edit_information"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -156,7 +167,6 @@
         android:text="Huỷ"
         android:textColor="@color/white"
         app:backgroundTint="@color/black" />
-
 
 </LinearLayout>
 </ScrollView>

@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp">
         <ImageButton
-            android:id="@+id/btn_BackToCart_ConfirmOrder"
+            android:id="@+id/imv_btn_BackToCart_activity_comfirm_order"
             android:layout_gravity="center_vertical"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -56,43 +56,38 @@
             android:orientation="horizontal"
             android:layout_marginBottom="5dp">
             <TextView
-                android:id="@+id/txt_Name_"
+                android:id="@+id/txt_Name_activity_comfirm_order"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="Nguyễn Văn A"/>
-            <TextView
-                android:id="@+id/txt_PhoneNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0934922475"/>
+
 
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txt_PhoneNumber_activity_comfirm_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="190 Lý Tế Xương"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:text="0934922475"
+                android:layout_marginEnd="240dp"/>
 
             <ImageButton
-                android:id="@+id/imv_editInformation_ConfirmOrder"
+                android:id="@+id/imv_btn_editInformation_activity_comfirm_order"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                />
+        </LinearLayout>
+
         <TextView
+            android:id="@+id/txt_ShippingAddress_activity_comfirm_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phường Linh Đông, thành phố Thủ Đức, TP. Hồ Chí Minh"
+            android:text="190 Lý Tế Xương, Phường Linh Đông, thành phố Thủ Đức, TP. Hồ Chí Minh"
             android:layout_marginBottom="10dp"/>
 
     </LinearLayout>
@@ -118,23 +113,22 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/rad_Delivery_ConfirmOrder"
+                android:id="@+id/rad_Delivery_activity_comfirm_order"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Giao hàng tiêu chuẩn"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/txt_PriceDelivery_ConfirmOrder"
+                android:id="@+id/txt_PriceDelivery_activity_comfirm_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25.000 VNĐ"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                 />
+                app:layout_constraintTop_toTopOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         <TextView
@@ -164,17 +158,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RadioButton
-                android:id="@+id/rad_Cash_ConfirmOrder"
+                android:id="@+id/rad_Cash_activity_comfirm_order"
                 android:text="Trả tiền mặt khi nhận hàng"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <RadioButton
-                android:id="@+id/rad_InternetBanking_ConfirmOrder"
+                android:id="@+id/rad_InternetBanking_activity_comfirm_order"
                 android:text="Internet Banking"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <RadioButton
-                android:id="@+id/rad_Momo_ConfirmOrder"
+                android:id="@+id/rad_Momo_activity_comfirm_order"
                 android:text="Thanh toán bằng Momo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -207,6 +201,7 @@
                 android:layout_height="wrap_content"
                 android:text="Điểm"/>
             <TextView
+                android:id="@+id/txt_RatingPoint_activity_comfirm_order"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="5000 VNĐ"
@@ -224,14 +219,15 @@
                 android:text="Voucher"/>
 
             <TextView
+                android:id="@+id/txt_VoucherName_activity_comfirm_order"
                 android:gravity="end"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="DiduClub5000"
                 android:layout_marginEnd="20dp"/>
 
-            <ImageView
-                android:id="@+id/imvbtn_ChooseVoucher_ConfirmOrder"
+            <ImageButton
+                android:id="@+id/imv_btn_ChooseVoucher_activity_comfirm_order"
                 android:layout_marginLeft="-20dp"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -263,7 +259,7 @@
                 android:layout_height="wrap_content"
                 android:text="Tổng tiền hàng"/>
             <TextView
-                android:id="@+id/txt_ToTalProductPrice_ConfirmOrder"
+                android:id="@+id/txt_ToTalProductPrice_activity_comfirm_order"
                 android:gravity="end"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -278,7 +274,7 @@
                 android:layout_height="wrap_content"
                 android:text="Phí vận chuyển"/>
             <TextView
-                android:id="@+id/txt_PriceDeliveryThanhToan_ConfirmOrder"
+                android:id="@+id/txt_PriceDeliveryThanhToan_activity_comfirm_order"
                 android:gravity="end"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -293,7 +289,7 @@
                 android:layout_height="wrap_content"
                 android:text="Điểm"/>
             <TextView
-                android:id="@+id/txt_Match_ConfirmOrder"
+                android:id="@+id/txt_Point_activity_comfirm_order"
                 android:gravity="end"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -308,7 +304,7 @@
                 android:layout_height="wrap_content"
                 android:text="Voucher"/>
             <TextView
-                android:id="@+id/txt_Voucher_ConfirmOrder"
+                android:id="@+id/txt_Voucher_activity_comfirm_order"
                 android:gravity="end"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -323,7 +319,7 @@
                 android:layout_height="wrap_content"
                 android:text="Tổng thanh toán"/>
             <TextView
-                android:id="@+id/txt_ToTalSum_ConfirmOrder"
+                android:id="@+id/txt_ToTalSum_activity_comfirm_order"
                 android:gravity="end"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -332,7 +328,7 @@
 
     </LinearLayout>
     <Button
-        android:id="@+id/btn_DatHang_ConfirmOrder"
+        android:id="@+id/btn_DatHang_activity_comfirm_order"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -341,8 +337,6 @@
         app:backgroundTint="@color/black"
         android:textColor="@color/white"
         android:text="Đặt hàng"/>
-
-
 
 </LinearLayout>
 </ScrollView>
