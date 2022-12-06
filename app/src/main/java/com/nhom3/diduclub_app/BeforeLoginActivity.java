@@ -2,6 +2,7 @@ package com.nhom3.diduclub_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,20 +29,24 @@ public class BeforeLoginActivity extends AppCompatActivity {
         btnLogin_activity_before_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(BeforeLoginActivity.this,LoginmethodActivity.class);
+                startActivity(intent);
             }
         });
 
         btnRegister_activity_before_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(BeforeLoginActivity.this,RegisterActivity.class);
+                startActivity(intent);
             }
         });
 
         btnBackToHomePage_activity_before_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent=new Intent(BeforeLoginActivity.this,MainActivity.class);
+                startActivity(intent);
 
             }
         });
