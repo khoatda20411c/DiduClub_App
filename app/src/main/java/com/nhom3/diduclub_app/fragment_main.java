@@ -3,14 +3,17 @@ package com.nhom3.diduclub_app;
 
 import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -24,6 +27,8 @@ import java.util.ArrayList;
 
 public class fragment_main extends Fragment {
     GridView gv_HotProduct_fragment_main;
+    Button btn_login_fragmentmain;
+
     ArrayList<ProductModel> arrayList;
     ProductbestsellerAdapter adapter;
 
@@ -32,10 +37,15 @@ public class fragment_main extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_main,container,false);
-        gv_HotProduct_fragment_main=view.findViewById(R.id.gv_HotProduct_fragment_main);
+        gv_HotProduct_fragment_main= view.findViewById(R.id.gv_HotProduct_fragment_main);
+        btn_login_fragmentmain = view.findViewById(R.id.btn_login_fragmentmain);
+        btn_login_fragmentmain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         arrayList=new ArrayList<>();
-
-
         adapter=new ProductbestsellerAdapter(getContext(),R.layout.item_bestsellerproduct,arrayList);
         gv_HotProduct_fragment_main.setAdapter(adapter);
         Getdata();
@@ -43,11 +53,10 @@ public class fragment_main extends Fragment {
         return view;
     }
 
+
+
     private void Getdata() {
         Cursor cursor= LoadingActivity.database.rawQuery("SELECT * FROM Product",null);
-        Log.i("Count: ", cursor.getCount() + "");
-
-
         arrayList.clear();
         while (cursor.moveToNext()){
             String id= cursor.getString(0);
@@ -63,12 +72,8 @@ public class fragment_main extends Fragment {
             String mausac=cursor.getString(10);
             ProductModel sanpham=new ProductModel(id,ten,danhmuc,giakhuyenmai,size,giagoc,star,mota,sodanhgia,hinh,mausac);
             arrayList.add(sanpham);
-
-
         }
         cursor.close();
-        Log.i("Test: ", arrayList.size() + "");
         adapter.notifyDataSetChanged();
-
     }
 }
