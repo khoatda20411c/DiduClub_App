@@ -24,7 +24,7 @@ public class MainLoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_login);
         Linkview();
         setupViewpager();
 //        btnlogin_main_fragment.setOnClickListener(new View.OnClickListener() {

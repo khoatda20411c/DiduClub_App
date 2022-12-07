@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,20 +48,18 @@ public class AccountActivity extends Fragment {
     }
 
     private void getData() {
-        Cursor cursor = LoadingActivity.database.rawQuery(" SELECT Last_Name, First_Name, Email, Customer_Type, Avatar  FROM Account WHERE Account_ID = ? ",
+        Cursor cursor = LoadingActivity.database.rawQuery(" SELECT Last_Name, First_Name, Email, Customer_Type FROM Account WHERE Account_ID = ? ",
                 new String[]{"DC01"});
         while (cursor.moveToNext()) {
             String Acclastname = cursor.getString(0);
             String Accfirstname = cursor.getString(1);
             String Accemail = cursor.getString(2);
             String AccType = cursor.getString(3);
-            byte[] AccAvatar = cursor.getBlob(9);
 
             txtAccountLastName_activity_account.setText(Acclastname);
             txtAccountFirstName_activity_account.setText(Accfirstname);
             txtAccountEmail_activity_account.setText(Accemail);
             txtAccountRate_activity_account.setText(AccType);
-
 
         }
         cursor.close();
