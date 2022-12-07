@@ -60,6 +60,7 @@ public class AccountActivity extends Fragment {
             txtAccountEmail_activity_account.setText(Accemail);
             txtAccountRate_activity_account.setText(AccType);
 
+
         }
         cursor.close();
     }
