@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="380dp"
         android:scaleX="1.1"
-        android:src="@drawable/wauwau">
+        android:src="@drawable/ao_quan">
 
     </ImageView>
     <ImageView
