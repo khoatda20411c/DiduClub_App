@@ -1,29 +1,24 @@
 package com.nhom3.diduclub_app;
 
-//import static androidx.fragment.app.FragmentPagerAdapter.makeFragmentName;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.nhom3.Adapters.ViewPagerAdapter;
+import com.nhom3.Adapters.ViewPagerloginAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainLoginActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     ViewPager mViewpager;
     FragmentManager manager;
-    Button btnlogin_main_fragment;
 
 
     @Override
@@ -71,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.account:
                         mViewpager.setCurrentItem(0);
-                        Toast.makeText(MainActivity.this, "Login now", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainLoginActivity.this, "Login now", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 return true;
@@ -85,15 +80,15 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     private void setupViewpager() {
-        ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        mViewpager.setAdapter(viewPagerAdapter);
+        ViewPagerloginAdapter viewloginPagerAdapter=new ViewPagerloginAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        mViewpager.setAdapter(viewloginPagerAdapter);
 
     }
 
     private void Linkview() {
         bottomNavigationView = findViewById(R.id.bottom_navigation_nar);
         mViewpager= findViewById(R.id.viewpager);
-        btnlogin_main_fragment=(Button) findViewById(R.id.btn_login_fragmentmain);
+
         mViewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

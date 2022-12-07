@@ -2,6 +2,7 @@ package com.nhom3.diduclub_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,8 @@ public class LoginmethodActivity extends AppCompatActivity {
         txtForgotPass_activity_loginmethod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent=new Intent(LoginmethodActivity.this,ForgetPasswordActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -33,6 +36,8 @@ public class LoginmethodActivity extends AppCompatActivity {
         btnLogin_activity_loginmethod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent=new Intent(LoginmethodActivity.this,LoginSuccessfulActivity.class);
+                startActivity(intent);
 
             }
         });

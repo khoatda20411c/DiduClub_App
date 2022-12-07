@@ -4,7 +4,9 @@ package com.nhom3.diduclub_app;
 import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
 
 import android.app.Activity;
-import android.app.Fragment;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -13,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
@@ -42,6 +45,8 @@ public class fragment_main extends Fragment {
         btn_login_fragmentmain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),LoginmethodActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -49,6 +54,12 @@ public class fragment_main extends Fragment {
         adapter=new ProductbestsellerAdapter(getContext(),R.layout.item_bestsellerproduct,arrayList);
         gv_HotProduct_fragment_main.setAdapter(adapter);
         Getdata();
+        gv_HotProduct_fragment_main.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getContext(), position+"", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return view;
     }

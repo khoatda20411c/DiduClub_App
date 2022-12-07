@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".CartNotLoginFragment"
     android:orientation="vertical"
     android:padding="20dp">
 
@@ -45,19 +46,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         android:orientation="vertical">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:src="@drawable/ic_baseline_shopping_cart_24"/>
+            android:src="@drawable/ic_baseline_notifications_active_24"/>
 
         <TextView
             android:id="@+id/txt_Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Vui lòng đăng nhập để xem
-            Giỏ hàng của bạn"
+            Thông báo của bạn"
             android:textSize="26sp"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -65,7 +67,7 @@
             android:gravity="center"/>
 
         <Button
-            android:id="@+id/btn_Login_fragment_cart_not_login"
+            android:id="@+id/btn_Login_activity_not_login_noti_fragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"

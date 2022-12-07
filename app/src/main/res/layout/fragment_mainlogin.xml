@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="230dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/menu">
+
+                </ImageView>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/account">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="65dp"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What's up, quý khách"></TextView>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="110dp"
+            android:layout_width="wrap_content"
+            android:textSize="24dp"
+            android:layout_height="wrap_content"
+            android:text="DIDU CLUB - LOCAL BRAND"></TextView>
+        <LinearLayout
+            android:layout_marginTop="170dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:weightSum="10">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:height="50dp"
+                android:background="@drawable/custom_search_mainactivity"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:hint="Tìm kiếm/ Tra cứu sản phẩm"
+                android:minHeight="48dp"
+                android:paddingLeft="10dp"
+                app:backgroundTint="@null"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck">
+
+            </EditText>
+            <ImageView
+                android:layout_weight="3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/filter">
+
+            </ImageView>
+
+        </LinearLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="250dp"
+        android:layout_width="match_parent"
+
+        app:cardCornerRadius="50dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imv_HotProductThumb_fragment_main"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="@null"
+
+            android:src="@drawable/img">
+
+        </ImageView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="450dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Sản phẩm hot nhất">
+
+        </TextView>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Xem tất cả">
+
+        </TextView>
+    </RelativeLayout>
+    <GridView
+        android:layout_marginTop="500dp"
+        android:id="@+id/gv_HotProduct_fragment_main"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="70dp"
+        android:numColumns="2"
+
+        android:layout_height="match_parent">
+
+    </GridView>
+
+
+
+
+</RelativeLayout>

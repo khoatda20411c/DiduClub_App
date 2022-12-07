@@ -20,7 +20,7 @@ public class LoginSuccessfulActivity extends AppCompatActivity {
         btnGoToHomePage_activity_login_successful.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginSuccessfulActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginSuccessfulActivity.this, MainLoginActivity.class);
                 startActivity(intent);
             }
         });

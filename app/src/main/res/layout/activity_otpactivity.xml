@@ -76,6 +76,7 @@
 
     </LinearLayout>
     <Button
+        android:id="@+id/btnnext_otp"
         android:layout_marginTop="100dp"
         app:backgroundTint="@null"
         android:textSize="20dp"

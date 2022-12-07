@@ -2,6 +2,7 @@ package com.nhom3.diduclub_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,8 @@ public class ChangePasswordActivity extends AppCompatActivity {
         btnConfirm_activity_change_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent=new Intent(ChangePasswordActivity.this,MainLoginActivity.class);
+                startActivity(intent);
 
             }
         });

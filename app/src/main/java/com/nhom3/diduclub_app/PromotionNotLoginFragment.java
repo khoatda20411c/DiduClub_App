@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,8 @@ public class PromotionNotLoginFragment extends Fragment {
          btnLogin_fragment_promotion_not_login.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
+                 Intent intent=new Intent(getActivity(),LoginmethodActivity.class);
+                 startActivity(intent);
 
              }
          });
