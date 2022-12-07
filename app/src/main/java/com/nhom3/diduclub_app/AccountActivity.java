@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,14 +14,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.nhom3.Database.Database;
+
 public class AccountActivity extends Fragment {
     ImageView imvAccountAvatar_activity_account;
-    TextView txtAccountName_activity_account, txtAccountEmail_activity_account,
+    TextView txtAccountLastName_activity_account ,txtAccountFirstName_activity_account, txtAccountEmail_activity_account,
             txtAccountRate_activity_account, txtAccountPoint_activity_account;
     Button btnPersonalInfo_activity_account, btnPaymentOrder_activity_account,
             btnVoucherList_activity_account, btnAccountSetting_activity_account,
             btnSupportAndRule_activity_account, btnLogout_activity_account;
     View view = null;
+
+    Database database;
 
 /*    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +40,28 @@ public class AccountActivity extends Fragment {
         linkViews();
         addEvents();
 
+        getData();
+
         return view;
+    }
+
+    private void getData() {
+        Cursor cursor = LoadingActivity.database.rawQuery(" SELECT Last_Name, First_Name, Email, Customer_Type, Avatar  FROM Account WHERE Account_ID = ? ",
+                new String[]{"DC01"});
+        while (cursor.moveToNext()) {
+            String Acclastname = cursor.getString(0);
+            String Accfirstname = cursor.getString(1);
+            String Accemail = cursor.getString(2);
+            String AccType = cursor.getString(3);
+            byte[] AccAvatar = cursor.getBlob(9);
+
+            txtAccountLastName_activity_account.setText(Acclastname);
+            txtAccountFirstName_activity_account.setText(Accfirstname);
+            txtAccountEmail_activity_account.setText(Accemail);
+            txtAccountRate_activity_account.setText(AccType);
+
+        }
+        cursor.close();
     }
 
     private void addEvents() {
@@ -86,7 +112,8 @@ public class AccountActivity extends Fragment {
     private void linkViews() {
         imvAccountAvatar_activity_account = view.findViewById(R.id.imv_AccountAvatar_activity_account);
 
-        txtAccountName_activity_account = view.findViewById(R.id.txt_AccountName_activity_account);
+        txtAccountLastName_activity_account = view.findViewById(R.id.txt_AccountLastName_activity_account);
+        txtAccountFirstName_activity_account = view.findViewById(R.id.txt_AccountFirstName_activity_account);
         txtAccountEmail_activity_account = view.findViewById(R.id.txt_AccountEmail_activity_account);
         txtAccountRate_activity_account = view.findViewById(R.id.txt_AccountRate_activity_account);
         txtAccountPoint_activity_account = view.findViewById(R.id.txt_AccountPoint_activity_account);
