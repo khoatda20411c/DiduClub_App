@@ -15,7 +15,8 @@ import android.widget.TextView;
 
 public class AccountActivity extends Fragment {
     ImageView imvAccountAvatar_activity_account;
-    TextView txtAccountName_activity_account, txtAccountEmail_activity_account,
+    TextView txtAccountFirstName_activity_account, txtAccountEmail_activity_account,
+            txtAccountLastName_activity_account,
             txtAccountRate_activity_account, txtAccountPoint_activity_account;
     Button btnPersonalInfo_activity_account, btnPaymentOrder_activity_account,
             btnVoucherList_activity_account, btnAccountSetting_activity_account,
@@ -86,7 +87,8 @@ public class AccountActivity extends Fragment {
     private void linkViews() {
         imvAccountAvatar_activity_account = view.findViewById(R.id.imv_AccountAvatar_activity_account);
 
-        txtAccountName_activity_account = view.findViewById(R.id.txt_AccountName_activity_account);
+        txtAccountFirstName_activity_account = view.findViewById(R.id.txt_AccountFirstName_activity_account);
+        txtAccountLastName_activity_account = view.findViewById(R.id.txt_AccountLastName_activity_account);
         txtAccountEmail_activity_account = view.findViewById(R.id.txt_AccountEmail_activity_account);
         txtAccountRate_activity_account = view.findViewById(R.id.txt_AccountRate_activity_account);
         txtAccountPoint_activity_account = view.findViewById(R.id.txt_AccountPoint_activity_account);
