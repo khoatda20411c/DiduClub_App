@@ -37,7 +37,7 @@
         <ImageView
             android:id="@+id/imv_Next_activity"
             android:layout_width="50dp"
-            android:layout_marginLeft="350dp"
+            android:layout_marginLeft="300dp"
             android:src="@drawable/ic_baseline_arrow_forward_24"
             android:layout_height="50dp">
 

@@ -6,13 +6,15 @@ public class DiscountModel implements Serializable {
     private String Discount_ID;
     private String Product_Name;
     private String Percent;
+    private String Product_Type;
     private Double Price;
     private byte[] Discount_Image;
 
-    public DiscountModel(String discount_ID, String product_Name, String percent, Double price, byte[] discount_Image) {
+    public DiscountModel(String discount_ID, String product_Name, String percent, String product_Type, Double price, byte[] discount_Image) {
         Discount_ID = discount_ID;
         Product_Name = product_Name;
         Percent = percent;
+        Product_Type = product_Type;
         Price = price;
         Discount_Image = discount_Image;
     }
@@ -39,6 +41,14 @@ public class DiscountModel implements Serializable {
 
     public void setPercent(String percent) {
         Percent = percent;
+    }
+
+    public String getProduct_Type() {
+        return Product_Type;
+    }
+
+    public void setProduct_Type(String product_Type) {
+        Product_Type = product_Type;
     }
 
     public Double getPrice() {
