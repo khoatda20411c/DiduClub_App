@@ -3,16 +3,29 @@ package com.nhom3.diduclub_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TabHost;
 
 public class SuppportCenterActivity extends AppCompatActivity {
+    ImageView imvBack_activity_suppport_center;
+    Button btnPolicyAndRule_activity_suppport_center;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suppport_center);
+        linkVIews();
+        defineTabHost();
+    }
 
+    private void linkVIews() {
+        imvBack_activity_suppport_center = findViewById(R.id.imv_Back_activity_suppport_center);
 
+        btnPolicyAndRule_activity_suppport_center = findViewById(R.id.btn_PolicyAndRule_activity_suppport_center);
+    }
+
+    private void defineTabHost() {
         // initiating the tabhost
         TabHost tabhost = findViewById(R.id.th_SupportCenter);
 

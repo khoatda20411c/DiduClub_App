@@ -5,9 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent"
-
-    tools:context=".MainActivity">
-
+    tools:context=".SuppportCenterActivity"
+    android:padding="10dp">
 
 <LinearLayout
     android:layout_width="wrap_content"
@@ -43,7 +42,7 @@
     <TabHost
         android:id="@+id/th_SupportCenter"
         android:layout_width="match_parent"
-        android:layout_height="523dp"
+        android:layout_height="550dp"
         android:layout_margin="10dp">
 
         <LinearLayout
@@ -61,6 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+<!--                tab cau hoi thuong gap-->
                 <LinearLayout
                     android:id="@+id/tab_Question"
                     android:layout_width="match_parent"
@@ -68,17 +68,101 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="100dp"
-                        android:layout_marginTop="7dp"
-                        android:text="tab1"
+                        android:text="Câu hỏi thường gặp"
                         android:textColor="@color/black"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        android:layout_marginBottom="10dp"/>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_Question1_fragment_frequent_questions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Question1"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:id="@+id/txt_Question2_fragment_frequent_questions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Question2"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:id="@+id/txt_Question3_fragment_frequent_questions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Question3"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:id="@+id/txt_Question4_fragment_frequent_questions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Question4"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:id="@+id/txt_Question5_fragment_frequent_questions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Question5"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:id="@+id/txt_Question6_fragment_frequent_questions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Question6"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:id="@+id/txt_Question7_fragment_frequent_questions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Question7"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:id="@+id/txt_Question8_fragment_frequent_questions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Question8"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="10dp"/>
+
+                        </LinearLayout>
+
+                    </ScrollView>
 
                 </LinearLayout>
 
+<!--                tab thong tin chung -->
                 <LinearLayout
                     android:id="@+id/tab_GeneralInfo"
                     android:layout_width="match_parent"
@@ -86,31 +170,205 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="100dp"
-                        android:layout_marginTop="7dp"
-                        android:text="tab2"
+                        android:text="Thông tin chung"
                         android:textColor="@color/black"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        android:layout_marginBottom="10dp"/>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Chính sách Didu"
+                                android:textColor="@color/black"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray"
+                                android:layout_marginBottom="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="20dp"
+                                android:orientation="vertical"
+                                android:layout_marginBottom="5dp">
+
+                                <TextView
+                                    android:id="@+id/txt_G_Question1_fragment_general_information"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/G_Question1"
+                                    android:textSize="18sp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <TextView
+                                    android:id="@+id/txt_G_Question2_fragment_general_information"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/G_Question2"
+                                    android:textSize="18sp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <TextView
+                                    android:id="@+id/txt_G_Question3_fragment_general_information"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/G_Question3"
+                                    android:textSize="18sp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <TextView
+                                    android:id="@+id/txt_G_Question4_fragment_general_information"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/G_Question4"
+                                    android:textSize="18sp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <TextView
+                                    android:id="@+id/txt_G_Question5_fragment_general_information"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/G_Question5"
+                                    android:textSize="18sp"
+                                    android:layout_marginBottom="10dp"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tài khoản DiDu"
+                                android:textColor="@color/black"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Mua sắm ăn toàn"
+                                android:textColor="@color/black"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Thư viện thông tin"
+                                android:textColor="@color/black"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ứng dụng DuDi"
+                                android:textColor="@color/black"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hướng dẫn chung"
+                                android:textColor="@color/black"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/gray"
+                                android:layout_marginBottom="10dp"/>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
                 </LinearLayout>
 
+<!--                tab hotline -->
                 <LinearLayout
                     android:id="@+id/tab_Hotline"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:background="#4CAF50">
 
-                    <TextView
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/ic_baseline_call_24"
+                        android:layout_marginBottom="10dp"/>
+
+                    <Button
+                        android:id="@+id/btn_CallToSeller_fragment_directly_advice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="100dp"
-                        android:layout_marginTop="7dp"
-                        android:text="tab3"
-                        android:textColor="@color/black"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/shape_radius_button_homepage"
+                        android:text="Gọi điện tới người bán"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:paddingHorizontal="30dp"
+                        app:backgroundTint="@null"
+                        android:textAllCaps="false"/>
+
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>

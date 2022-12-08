@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HistorycardActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +32,72 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <TabHost
+        android:id="@+id/th_OrderHisotry_activity_hisotorycard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--     tab tat ca-->
+                <LinearLayout
+                    android:id="@+id/tab_All"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/lv_AllHistoryOrder_activity_historycard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+                <!--                tab dang giao hang -->
+                <LinearLayout
+                    android:id="@+id/tab_Delivering"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+                </LinearLayout>
+
+                <!--                tab da nhan hang -->
+                <LinearLayout
+                    android:id="@+id/tab_Received"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+                </LinearLayout>
+
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </TabHost>
+
+<!--    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/allhistoryfragmet_container"
@@ -46,7 +112,6 @@
             tools:layout="@layout/fragment_allhistoryfragment">
         </fragment>
 
-    </LinearLayout>
-
+    </LinearLayout>-->
 
 </LinearLayout>

@@ -20,7 +20,8 @@
         android:layout_height="wrap_content"
         app:itemTextColor="@color/white"
         android:background="@drawable/navigation_custom"
-        app:backgroundTint="@null">
+        app:backgroundTint="@null"
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/txt_activity_waiting_content"
@@ -37,8 +38,8 @@
         <ImageView
             android:id="@+id/imv_Next_activity"
             android:layout_width="50dp"
-            android:layout_marginLeft="300dp"
-            android:src="@drawable/ic_baseline_arrow_forward_24"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_baseline_arrow_circle_right_24"
             android:layout_height="50dp">
 
         </ImageView>

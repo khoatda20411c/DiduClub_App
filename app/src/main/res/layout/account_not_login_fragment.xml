@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountActivity"
+    tools:context=".AccountNotLoginFragment"
     android:orientation="vertical"
     android:padding="20dp">
 
@@ -16,11 +16,10 @@
         android:padding="20dp">
 
         <ImageView
-            android:id="@+id/imv_AccountAvatar_activity_account"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/z3890555137815_e911474c2b86ed886145f6ab1fae50bd" />
+            android:src="@drawable/account_icon"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,20 +36,11 @@
                     android:id="@+id/txt_AccountLastName_activity_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tạ"
+                    android:text="Khách vãng lai"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_marginEnd="5dp"/>
-
-                <TextView
-                    android:id="@+id/txt_AccountFirstName_activity_account"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Phúc"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -61,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:gravity="right"
-                android:text="ongtrumandroid123@gmail.com"
+                android:text="didu.guest@gmail.com"
                 android:textColor="#727272"
                 android:textSize="14sp" />
 
@@ -74,7 +64,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thành viên"
+                    android:text="Thành viên: "
                     android:textColor="#727272"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -84,7 +74,7 @@
                     android:id="@+id/txt_AccountRate_activity_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Vàng"
+                    android:text="chưa có hạng"
                     android:textColor="#727272"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -97,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:drawableRight="@drawable/ic_baseline_celebration_24"
                 android:gravity="right"
-                android:text="Tích lũy: 21000 điểm  "
+                android:text="Tích lũy: chưa có điểm  "
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -108,87 +98,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/shape_border_button"
         android:orientation="vertical"
         android:paddingHorizontal="25dp"
         android:paddingVertical="20dp">
 
         <Button
-            android:id="@+id/btn_PersonalInfo_activity_account"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/shadow_button_layer_list"
-            android:drawableLeft="@drawable/ic_baseline_person_24"
-            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
-            android:paddingHorizontal="20dp"
-            android:text="   Thông tin cá nhân"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:backgroundTint="@null" />
-
-        <Button
-            android:id="@+id/btn_HistoryOrder_activity_account"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/shadow_button_layer_list"
-            android:drawableLeft="@drawable/ic_baseline_history_24"
-            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
-            android:paddingHorizontal="20dp"
-            android:text="   Lịch sử đơn hàng"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:backgroundTint="@null" />
-
-        <Button
-            android:id="@+id/btn_VoucherList_activity_account"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/shadow_button_layer_list"
-            android:drawableLeft="@drawable/ic_baseline_card_giftcard_24"
-            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
-            android:paddingHorizontal="20dp"
-            android:text="   Danh sách voucher"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:backgroundTint="@null" />
-
-        <Button
-            android:id="@+id/btn_AccountSetting_activity_account"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shadow_button_layer_list"
-            android:drawableLeft="@drawable/ic_baseline_account_circle_24"
-            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
-            android:paddingHorizontal="20dp"
-            android:text="   Cài đặt tài khoản"
-            android:textAlignment="textStart"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:backgroundTint="@null" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape_border_button"
-        android:orientation="vertical"
-        android:paddingHorizontal="25dp"
-        android:paddingVertical="20dp">
-
-        <Button
-            android:id="@+id/btn_SupportAndRule_activity_account"
+            android:id="@+id/btn_SupportAndRule_account_not_login_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -200,12 +116,12 @@
             app:backgroundTint="@null" />
 
         <Button
-            android:id="@+id/btn_Logout_activity_account"
+            android:id="@+id/btn_Login_account_not_login_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@drawable/shadow_button_logout"
-            android:text="Đăng xuất tài khoản"
+            android:text="Đăng nhập tài khoản"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp"
