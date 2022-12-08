@@ -15,16 +15,15 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="500dp"
-
-        android:src="@drawable/img">
+        android:id="@+id/imghinhanhsanphamgiohang">
 
     </ImageView>
     <ImageView
         android:id="@+id/imv_DelateProduct_item_listsanphamgiohang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="350dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="370dp"
+        android:layout_marginTop="60dp"
         android:src="@drawable/ic_baseline_delete_24">
 
     </ImageView>
@@ -43,13 +42,23 @@
         android:text="325.000">
 
     </TextView>
+    <ImageView
+        android:background="@drawable/custom_image_cart"
+        app:backgroundTint="@null"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="80dp"
+        android:src="@drawable/img5568_copy_dimmed"
+        android:layout_height="100dp">
+
+    </ImageView>
     <LinearLayout
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:orientation="vertical"
         app:backgroundTint="@null"
         android:background="@drawable/custom_itemsanphamgiohang"
-        android:layout_marginLeft="70dp"
+        android:layout_marginLeft="150dp"
         android:layout_height="wrap_content">
 
         <TextView
@@ -74,7 +83,7 @@
 
     </LinearLayout>
     <LinearLayout
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="150dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

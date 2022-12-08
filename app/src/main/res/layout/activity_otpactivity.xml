@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/OTP1"
             android:maxLength="1"
             android:textSize="30dp"
             android:gravity="center"
@@ -41,17 +42,7 @@
 
         </EditText>
         <EditText
-            android:gravity="center"
-            android:layout_weight="1"
-            android:maxLength="1"
-            android:textSize="30dp"
-            android:layout_marginLeft="20dp"
-            android:layout_width="50dp"
-            android:layout_height="80dp"
-            android:inputType="numberDecimal">
-
-        </EditText>
-        <EditText
+            android:id="@+id/OTP2"
             android:gravity="center"
             android:layout_weight="1"
             android:maxLength="1"
@@ -63,6 +54,19 @@
 
         </EditText>
         <EditText
+            android:id="@+id/OTP3"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:textSize="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:inputType="numberDecimal">
+
+        </EditText>
+        <EditText
+            android:id="@+id/OTP4"
             android:gravity="center"
             android:layout_weight="1"
             android:maxLength="1"
