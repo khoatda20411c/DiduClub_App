@@ -39,10 +39,7 @@ public class ForgetPasswordActivity extends AppCompatActivity {
                     startActivity(intent);
                 }else
                     Toast.makeText(ForgetPasswordActivity.this, "Số điện thoại không hợp lệ", Toast.LENGTH_SHORT).show();
-
-
             }
         });
-
     }
 }

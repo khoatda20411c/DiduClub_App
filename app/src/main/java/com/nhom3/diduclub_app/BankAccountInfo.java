@@ -30,7 +30,6 @@ public class BankAccountInfo extends AppCompatActivity {
 
     private void getData() {
         Cursor cursor = LoadingActivity.database.rawQuery(" SELECT Bank_Account, Phone, Bank_Number, Momo_Name FROM Account WHERE Account_ID = ? ", new String[]{"DC03"});
-
         while (cursor.moveToNext()) {
             String AccBankAccount = cursor.getString(0);
             String AccPhone = cursor.getString(1);
