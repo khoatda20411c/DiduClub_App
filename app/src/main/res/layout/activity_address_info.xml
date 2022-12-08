@@ -65,14 +65,14 @@
             android:textColor="@color/black"
             android:layout_weight="1"/>
 
-        <TextView
-            android:id="@+id/txt_ReceiverName_activity_address_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tạ Kế Phúc"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:layout_weight="0.8"/>
+            <TextView
+                android:id="@+id/txt_ReceiverFirstName_activity_address_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phúc"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_weight="0.8"/>
 
     </LinearLayout>
 

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Waiting2Fragment">
+    tools:context=".fragment_waiting2">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="400dp"
@@ -20,7 +20,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="400dp"
-        android:text="20% Discount">
+        android:text="New Campain">
 
     </TextView>
     <TextView
@@ -31,7 +31,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="470dp"
-        android:text="New Arrival Product">
+        android:text="Explore the world">
 
     </TextView>
     <TextView
@@ -43,7 +43,7 @@
 
         android:layout_marginTop="550dp"
         android:layout_marginRight="20dp"
-        android:text="Publish up your selfies to make yourself more beautiful with this app">
+        android:text="Be an open_minded person and keep passion to your own">
 
     </TextView>
 

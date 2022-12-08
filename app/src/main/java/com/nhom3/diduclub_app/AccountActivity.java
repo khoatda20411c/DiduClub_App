@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -22,10 +23,11 @@ public class AccountActivity extends Fragment {
     ImageView imvAccountAvatar_activity_account;
     TextView txtAccountLastName_activity_account ,txtAccountFirstName_activity_account, txtAccountEmail_activity_account,
             txtAccountRate_activity_account, txtAccountPoint_activity_account;
-    Button btnPersonalInfo_activity_account, btnPaymentOrder_activity_account,
+    Button btnPersonalInfo_activity_account, btnHistoryOrder_activity_account,
             btnVoucherList_activity_account, btnAccountSetting_activity_account,
             btnSupportAndRule_activity_account, btnLogout_activity_account;
     View view = null;
+    Intent intent;
 
     Database database;
 
@@ -48,19 +50,21 @@ public class AccountActivity extends Fragment {
     }
 
     private void getData() {
-        Cursor cursor = LoadingActivity.database.rawQuery(" SELECT Last_Name, First_Name, Email, Customer_Type FROM Account WHERE Account_ID = ? ",
-                new String[]{"DC01"});
+        Cursor cursor = LoadingActivity.database.rawQuery(" SELECT Last_Name, First_Name, Email, Customer_Type, Avatar FROM Account WHERE Account_ID = ? ",
+                new String[]{"DC04"});
         while (cursor.moveToNext()) {
             String Acclastname = cursor.getString(0);
             String Accfirstname = cursor.getString(1);
             String Accemail = cursor.getString(2);
             String AccType = cursor.getString(3);
+            byte[] AccImage = cursor.getBlob(4);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(AccImage, 0, AccImage.length);
+            imvAccountAvatar_activity_account.setImageBitmap(bitmap);
 
             txtAccountLastName_activity_account.setText(Acclastname);
             txtAccountFirstName_activity_account.setText(Accfirstname);
             txtAccountEmail_activity_account.setText(Accemail);
             txtAccountRate_activity_account.setText(AccType);
-
         }
         cursor.close();
     }
@@ -73,7 +77,7 @@ public class AccountActivity extends Fragment {
             }
         });
 
-        btnPaymentOrder_activity_account.setOnClickListener(new View.OnClickListener() {
+        btnHistoryOrder_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -120,7 +124,7 @@ public class AccountActivity extends Fragment {
         txtAccountPoint_activity_account = view.findViewById(R.id.txt_AccountPoint_activity_account);
 
         btnPersonalInfo_activity_account = view.findViewById(R.id.btn_PersonalInfo_activity_account);
-        btnPaymentOrder_activity_account = view.findViewById(R.id.btn_PaymentOrder_activity_account);
+        btnHistoryOrder_activity_account = view.findViewById(R.id.btn_HistoryOrder_activity_account);
         btnVoucherList_activity_account = view.findViewById(R.id.btn_VoucherList_activity_account);
         btnAccountSetting_activity_account = view.findViewById(R.id.btn_AccountSetting_activity_account);
         btnSupportAndRule_activity_account = view.findViewById(R.id.btn_SupportAndRule_activity_account);

@@ -13,12 +13,27 @@
         android:theme="@style/Theme.DiduClub_App"
         tools:targetApi="31">
         <activity
+            android:name=".AccountNotLoginFragment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ProductinfoActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".fragment_notilogin"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <activity
             android:name=".MainLoginActivity"
             android:exported="false">
@@ -62,13 +77,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Allhistoryfragment"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".WaitingActivity"
             android:exported="false">
             <meta-data
@@ -105,13 +113,6 @@
         </activity>
         <activity
             android:name=".SuccessfulLoginActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".NotLoginNotiFragment"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -188,7 +189,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".CartNotLoginFragment"
+            android:name=".CartnotloginFragment"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -19,7 +19,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="400dp"
-        android:text="20% Discount">
+        android:text="Flash sale up to 60%">
 
     </TextView>
     <TextView
@@ -30,7 +30,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="470dp"
-        android:text="New Arrival Product">
+        android:text="New Collections">
 
     </TextView>
     <TextView
@@ -42,7 +42,7 @@
 
         android:layout_marginTop="550dp"
         android:layout_marginRight="20dp"
-        android:text="Publish up your selfies to make yourself more beautiful with this app">
+        android:text="Come here and find your own style to be a powerful person">
 
     </TextView>
 
