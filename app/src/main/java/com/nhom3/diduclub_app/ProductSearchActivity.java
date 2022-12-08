@@ -85,6 +85,7 @@ public class ProductSearchActivity extends AppCompatActivity {
         historySearchModelArrayList.add(new HistorySearchModel("Áo sinh viên UEL", R.drawable.ic_baseline_arrow_back_24));
         return historySearchModelArrayList;
     }
+
     private void Getdata() {
         Cursor cursor= LoadingActivity.database.rawQuery("SELECT * FROM Product",null);
         productModels.clear();
@@ -106,7 +107,4 @@ public class ProductSearchActivity extends AppCompatActivity {
         cursor.close();
         productSuggestAdapter.notifyDataSetChanged();
     }
-
-
-
 }

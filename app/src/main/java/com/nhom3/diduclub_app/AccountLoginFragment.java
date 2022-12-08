@@ -61,8 +61,6 @@ public class AccountLoginFragment extends Fragment {
             Bitmap bitmap = BitmapFactory.decodeByteArray(AccImage, 0, AccImage.length);
             imvAccountAvatar_activity_account.setImageBitmap(bitmap);
 
-
-
             txtAccountLastName_activity_account.setText(Acclastname);
             txtAccountFirstName_activity_account.setText(Accfirstname);
             txtAccountEmail_activity_account.setText(Accemail);

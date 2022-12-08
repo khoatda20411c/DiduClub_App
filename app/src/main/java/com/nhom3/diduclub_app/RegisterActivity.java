@@ -51,8 +51,6 @@ public class RegisterActivity extends AppCompatActivity {
                 String pass = edtPassword_activity_register.getText().toString().trim();
                 String repass = edtRetypePassword_activity_register.getText().toString().trim();
 
-
-
                 if(user.equals("")||pass.equals("") || email.equals("") ||repass.equals(""))
                     Toast.makeText(RegisterActivity.this, "Vui lòng điền đủ thông tin", Toast.LENGTH_SHORT).show();
                 else {
@@ -63,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Boolean insert = insertData(user, pass, email);
                             if (insert == true) {
                                 Toast.makeText(RegisterActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), SuccessfulLoginActivity.class);
+                                Intent intent = new Intent(getApplicationContext(), RegisterSuccessfulActivity.class);
                                 startActivity(intent);
                             }
                             else {

@@ -76,8 +76,7 @@
         app:endIconTint="@color/black"
         app:endIconMode="password_toggle"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-  >
+        android:layout_marginEnd="40dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_Password_activity_loginmethod"

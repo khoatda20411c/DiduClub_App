@@ -23,8 +23,6 @@ public class LoginmethodActivity extends AppCompatActivity {
     TextView txtForgotPass_activity_loginmethod;
     Button btnLogin_activity_loginmethod, btnLoginWithFacebook_activity_loginmethod, btnLoginWithGoogle_activity_loginmethod;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +81,9 @@ public class LoginmethodActivity extends AppCompatActivity {
     private void linkViews() {
         edtUsername_activity_loginmethod = findViewById(R.id.edt_Username_activity_loginmethod);
         edtPassword_activity_loginmethod = findViewById(R.id.edt_Password_activity_loginmethod);
+
         txtForgotPass_activity_loginmethod = findViewById(R.id.txt_ForgotPass_activity_loginmethod);
+
         btnLogin_activity_loginmethod = findViewById(R.id.btn_Login_activity_loginmethod);
         btnLoginWithFacebook_activity_loginmethod = findViewById(R.id.btn_LoginWithFacebook_activity_loginmethod);
         btnLoginWithGoogle_activity_loginmethod = findViewById(R.id.btn_LoginWithGoogle_activity_loginmethod);
