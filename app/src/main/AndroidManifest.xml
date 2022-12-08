@@ -20,6 +20,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".ProductSearchActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ProductinfoActivity"
             android:exported="false">
             <meta-data
@@ -203,14 +210,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".AccountActivity"
+            android:name=".AccountLoginFragment"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AccountSettingFragment"
+            android:name=".AccountSettingActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"

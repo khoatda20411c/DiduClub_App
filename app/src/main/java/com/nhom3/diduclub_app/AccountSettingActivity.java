@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class AccountSettingFragment extends AppCompatActivity {
+public class AccountSettingActivity extends AppCompatActivity {
     ImageView imvBack_fragment_account_setting;
     Button btnChangePassword_fragment_account_setting, btnAddressInfo_fragment_account_setting,
             btnBankAndWallet_fragment_account_setting, btnChangePIN_fragment_account_setting;
@@ -17,7 +17,7 @@ public class AccountSettingFragment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_account_setting);
+        setContentView(R.layout.activity_account_setting);
 
         linkViews();
         addEvents();
@@ -27,7 +27,7 @@ public class AccountSettingFragment extends AppCompatActivity {
         imvBack_fragment_account_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent12=new Intent(AccountSettingFragment.this,AccountActivity.class);
+                Intent intent12=new Intent(AccountSettingActivity.this, AccountLoginFragment.class);
                 startActivity(intent12);
 
             }
@@ -36,7 +36,7 @@ public class AccountSettingFragment extends AppCompatActivity {
         btnChangePassword_fragment_account_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(AccountSettingFragment.this, ChangePasswordGeneralActivity.class);
+                intent = new Intent(AccountSettingActivity.this, ChangePasswordGeneralActivity.class);
                 startActivity(intent);
             }
         });
@@ -44,7 +44,7 @@ public class AccountSettingFragment extends AppCompatActivity {
         btnAddressInfo_fragment_account_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(AccountSettingFragment.this, AddressInfoActivity.class);
+                intent = new Intent(AccountSettingActivity.this, AddressInfoActivity.class);
                 startActivity(intent);
             }
         });
@@ -52,7 +52,7 @@ public class AccountSettingFragment extends AppCompatActivity {
         btnBankAndWallet_fragment_account_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(AccountSettingFragment.this, BankAccountInfo.class);
+                intent = new Intent(AccountSettingActivity.this, BankAccountInfo.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +60,7 @@ public class AccountSettingFragment extends AppCompatActivity {
         btnChangePIN_fragment_account_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(AccountSettingFragment.this, ChangePinActivity.class);
+                intent = new Intent(AccountSettingActivity.this, ChangePinActivity.class);
                 startActivity(intent);
             }
         });
