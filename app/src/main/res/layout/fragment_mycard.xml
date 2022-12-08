@@ -5,16 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:layout_marginBottom="40dp"
     tools:context=".MainActivity">
+
     <ListView
+        android:id="@+id/gv_Cart_fragment_mycard"
         android:layout_width="match_parent"
         android:layout_marginTop="150dp"
         android:layout_marginBottom="110dp"
         android:layout_height="wrap_content">
 
     </ListView>
+
     <LinearLayout
-        android:layout_marginTop="630dp"
+        android:layout_marginTop="610dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -27,6 +31,7 @@
 
         </TextView>
         <TextView
+            android:id="@+id/txt_TotalPrice_fragment_mycard"
             android:layout_width="wrap_content"
             android:textSize="24dp"
             android:textStyle="bold"
@@ -45,7 +50,7 @@
         android:layout_width="match_parent"
 
         android:background="@drawable/shape_radius_button_homepage"
-        android:layout_marginTop="670dp"
+        android:layout_marginTop="640dp"
         android:layout_height="wrap_content">
         <TextView
             android:padding="15dp"
@@ -58,6 +63,7 @@
 
         </TextView>
         <ImageView
+            android:id="@+id/imv_NextToPayment_fragment_mycard"
             android:layout_gravity="center"
             android:layout_marginLeft="100dp"
             android:layout_width="40dp"
@@ -66,12 +72,6 @@
 
         </ImageView>
     </LinearLayout>
-
-
-
-
-
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -122,11 +122,12 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/imv_Back_fragment_mycard"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/menu">
+                    android:src="@drawable/ic_round_arrow_circle_left_24">
 
                 </ImageView>
 

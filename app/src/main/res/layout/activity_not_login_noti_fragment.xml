@@ -67,7 +67,7 @@
             android:gravity="center"/>
 
         <Button
-            android:id="@+id/btn_Login"
+            android:id="@+id/btn_Login_activity_not_login_noti_fragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"

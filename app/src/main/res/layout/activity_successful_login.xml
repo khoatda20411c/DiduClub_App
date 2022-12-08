@@ -22,7 +22,6 @@
             android:layout_marginBottom="10dp"/>
 
         <TextView
-            android:id="@+id/txt_Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hoàn thành !"
@@ -40,7 +39,7 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/btn_GoToHomePage"
+            android:id="@+id/btn_GoToHomePage_activity_successful_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -52,7 +51,7 @@
             android:paddingHorizontal="20dp"
             app:backgroundTint="@null"
             android:textAllCaps="false" />
-        
+
     </LinearLayout>
 
 </LinearLayout>

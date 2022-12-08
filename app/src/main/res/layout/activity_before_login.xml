@@ -9,13 +9,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/vanphuc"
+        android:background="@drawable/img5568_copy_dimmed"
         android:orientation="vertical"
         android:padding="20dp"
         android:gravity="bottom">
 
         <Button
-            android:id="@+id/btn_Login"
+            android:id="@+id/btn_Login_activity_before_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -30,7 +30,7 @@
             android:textAllCaps="false"/>
 
         <Button
-            android:id="@+id/btn_Register"
+            android:id="@+id/btn_Register_activity_before_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -45,7 +45,7 @@
             android:textAllCaps="false"/>
 
         <Button
-            android:id="@+id/btn_BackToHomePage"
+            android:id="@+id/btn_BackToHomePage_activity_before_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"

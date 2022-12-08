@@ -1,50 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HistorycardActivity">
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    tools:context=".HistorycardActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:padding="10dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imv_Back_activity_historycard"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_round_arrow_circle_left_24"/>
+
+        <TextView
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:text="Lịch sử đơn hàng"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TabHost
+        android:id="@+id/th_OrderHisotry_activity_hisotorycard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_arrow_back_24">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            </ImageView>
-            <TextView
-                android:textSize="26dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:text="Lịch sử đơn hàng">
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-            </TextView>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--     tab tat ca-->
+                <LinearLayout
+                    android:id="@+id/tab_All"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/lv_AllHistoryOrder_activity_historycard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+                <!--                tab dang giao hang -->
+                <LinearLayout
+                    android:id="@+id/tab_Delivering"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+                </LinearLayout>
+
+                <!--                tab da nhan hang -->
+                <LinearLayout
+                    android:id="@+id/tab_Received"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+                </LinearLayout>
+
+
+
+            </FrameLayout>
 
         </LinearLayout>
 
+    </TabHost>
 
-
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-    <fragment
-        android:layout_marginTop="110dp"
-        android:id="@+id/fragment_main"
+<!--    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        class="com.nhom3.diduclub_app.Allhistoryfragment"
-        tools:layout="@layout/fragment_allhistoryfragment">
+        android:id="@+id/allhistoryfragmet_container"
+        android:orientation="vertical">
 
-    </fragment>
+        <fragment
+            android:layout_marginTop="10dp"
+            android:id="@+id/fragment_allhistoryorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            class="com.nhom3.diduclub_app.Allhistoryfragment"
+            tools:layout="@layout/fragment_allhistoryfragment">
+        </fragment>
 
-</RelativeLayout>
+    </LinearLayout>-->
+
+</LinearLayout>

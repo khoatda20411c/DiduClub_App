@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Edit_Information_Activity"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="Chỉnh sửa thông tin cá nhân"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+    <ImageView
+        android:id="@+id/imv_AccountAvatar_activity_edit_information"
+        android:layout_margin="15dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/z3890555137815_e911474c2b86ed886145f6ab1fae50bd"/>
+    <Button
+        android:id="@+id/btn_ChonAnh_activity_edit_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shadow_button_layer_list"
+        android:text="Chọn ảnh"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/ic_baseline_photo_camera_24"
+        app:backgroundTint="@color/white" />
+    <LinearLayout
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/shadow_button_layer_list">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Tên"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/edt_Name_activity_edit_information"
+            android:hint="Nhập tên của bạn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/shadow_button_layer_list">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Giới tính"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rad_Nam_activity_edit_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam"
+                android:layout_marginRight="20dp"/>
+            <RadioButton
+                android:id="@+id/rad_Nu_activity_edit_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nữ"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/shadow_button_layer_list">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="SĐT"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/edt_EditSDT_activity_edit_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập số điện thoại"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/shadow_button_layer_list">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Ngày sinh"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/edt_NgaySinh_activity_edit_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập ngày sinh"/>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_LuuCacThayDoi_activity_edit_information"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shadow_button_layer_list"
+        android:text="Lưu các thay đổi"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/black" />
+    <Button
+        android:id="@+id/btn_Huy_activity_edit_information"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shadow_button_layer_list"
+        android:text="Huỷ"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/black" />
+
+</LinearLayout>
+</ScrollView>
