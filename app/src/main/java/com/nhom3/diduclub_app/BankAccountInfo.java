@@ -29,7 +29,7 @@ public class BankAccountInfo extends AppCompatActivity {
         imvBack_activity_bank_account_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(BankAccountInfo.this, AccountSettingFragment.class);
+                intent = new Intent(BankAccountInfo.this, AccountSettingActivity.class);
                 startActivity(intent);
             }
         });

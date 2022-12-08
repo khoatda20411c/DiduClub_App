@@ -38,7 +38,7 @@ public class ChangePinActivity extends AppCompatActivity {
         btnCancelChangePin_activity_change_pin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(ChangePinActivity.this, AccountSettingFragment.class);
+                intent = new Intent(ChangePinActivity.this, AccountSettingActivity.class);
                 startActivity(intent);
             }
         });

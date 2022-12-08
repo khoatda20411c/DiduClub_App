@@ -5,14 +5,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.nhom3.diduclub_app.AccountActivity;
-import com.nhom3.diduclub_app.CartnotloginFragment;
+import com.nhom3.diduclub_app.AccountLoginFragment;
 import com.nhom3.diduclub_app.fragment_discount;
 import com.nhom3.diduclub_app.fragment_main;
 import com.nhom3.diduclub_app.fragment_mycard;
 import com.nhom3.diduclub_app.fragment_notilogin;
-import com.nhom3.diduclub_app.fragment_notinotlogin;
-import com.nhom3.diduclub_app.fragment_promotion_not_login;
 import com.nhom3.diduclub_app.fragmentmainlogin;
 
 public class ViewPagerloginAdapter extends FragmentStatePagerAdapter {
@@ -35,7 +32,7 @@ public class ViewPagerloginAdapter extends FragmentStatePagerAdapter {
             case 3:
                 return new fragment_notilogin();
             case 4:
-                return new AccountActivity();
+                return new AccountLoginFragment();
             default:
                 return new fragment_main();
         }

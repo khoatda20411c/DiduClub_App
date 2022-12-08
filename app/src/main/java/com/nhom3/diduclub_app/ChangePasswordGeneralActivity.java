@@ -30,7 +30,7 @@ public class ChangePasswordGeneralActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
-        intent = new Intent(ChangePasswordGeneralActivity.this, AccountSettingFragment.class);
+        intent = new Intent(ChangePasswordGeneralActivity.this, AccountSettingActivity.class);
 
         imv_btnBack_ChangePasswordGeneralActivity.setOnClickListener(new View.OnClickListener() {
             @Override
