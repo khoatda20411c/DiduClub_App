@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HistorycardActivity"
+    tools:context=".OrderHistoryActivity"
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -67,6 +67,21 @@
 
                 </LinearLayout>
 
+<!--                tab cho xac nhan-->
+                <LinearLayout
+                    android:id="@+id/tab_Confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/lv_ConfirmHistoryOrder_activity_historycard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+
                 <!--                tab dang giao hang -->
                 <LinearLayout
                     android:id="@+id/tab_Delivering"
@@ -74,7 +89,10 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-
+                    <ListView
+                        android:id="@+id/lv_DeliveringHistoryOrder_activity_historycard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
 
                 </LinearLayout>
 
@@ -85,7 +103,24 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <ListView
+                        android:id="@+id/lv_ReceivedHistoryOrder_activity_historycard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
 
+                </LinearLayout>
+
+                <!--                tab da huy-->
+                <LinearLayout
+                    android:id="@+id/tab_Cancelled"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/lv_CancelledHistoryOrder_activity_historycard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
 
                 </LinearLayout>
 

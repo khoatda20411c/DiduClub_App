@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -25,12 +26,14 @@ import androidx.annotation.Nullable;
 
 import com.nhom3.Adapters.ProductbestsellerAdapter;
 import com.nhom3.Models.ProductModel;
+import com.nhom3.diduclub_app.databinding.FragmentMainBinding;
 
 import java.util.ArrayList;
 
 public class fragment_main extends Fragment {
     GridView gv_HotProduct_fragment_main;
     Button btn_login_fragmentmain;
+    EditText edtSearch;
 
     ArrayList<ProductModel> arrayList;
     ProductbestsellerAdapter adapter;
@@ -40,8 +43,17 @@ public class fragment_main extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_main,container,false);
+        edtSearch =  view.findViewById(R.id.edt_Search);
         gv_HotProduct_fragment_main= view.findViewById(R.id.gv_HotProduct_fragment_main);
         btn_login_fragmentmain = view.findViewById(R.id.btn_login_fragmentmain);
+
+        edtSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(getActivity(),ProductSearchActivity.class);
+                startActivity(intent);
+            }
+        });
         btn_login_fragmentmain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

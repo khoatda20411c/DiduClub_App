@@ -2,12 +2,16 @@ package com.nhom3.diduclub_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class ChangePasswordGeneralActivity extends AppCompatActivity {
     ImageButton imv_btnBack_ChangePasswordGeneralActivity;
@@ -30,7 +34,7 @@ public class ChangePasswordGeneralActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
-        intent = new Intent(ChangePasswordGeneralActivity.this, AccountSettingFragment.class);
+        intent = new Intent(ChangePasswordGeneralActivity.this, AccountSettingActivity.class);
 
         imv_btnBack_ChangePasswordGeneralActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +46,35 @@ public class ChangePasswordGeneralActivity extends AppCompatActivity {
         btnSavePassword_ChangePasswordGeneralActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String currentPassword = edtCurrentPassword_ChangePasswordGeneralActivity.getText().toString().trim();
+                String newPassword = edtNewPassword_ChangePasswordGeneralActivity.getText().toString().trim();
+                String reTypePassword = edtRetypePassword_ChangePasswordGeneralActivity.getText().toString().trim();
+                String userPassword = ""; //Password luu o database
+                
+                if(TextUtils.isEmpty(currentPassword) || TextUtils.isEmpty(newPassword)|| TextUtils.isEmpty(reTypePassword)){
+                    Toast.makeText(getApplicationContext(),"Vui long nhap day du thong tin", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                Cursor cursor = LoadingActivity.database.rawQuery(" SELECT Password FROM Account WHERE Account_ID = ? ",
+                        new String[]{"DC03"});
+                while (cursor.moveToNext()) {
+                    userPassword = cursor.getString(0);
+                }
+
+                if(!(currentPassword.equals(userPassword.toString().trim())) || !(newPassword.equals(reTypePassword.toString().trim()))){
+                    Toast.makeText(ChangePasswordGeneralActivity.this, "Ban nhap sai. Vui long nhap lai", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                ContentValues values = new ContentValues();
+                values.put("Password", newPassword);
+                int flag = LoadingActivity.database.update("Account", values, "Account_ID = ?", new String[]{"DC03"});
+                if(flag > 0){
+                    Toast.makeText(ChangePasswordGeneralActivity.this, "Cap nhat thanh cong", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(ChangePasswordGeneralActivity.this, "Cap nhat that bai", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

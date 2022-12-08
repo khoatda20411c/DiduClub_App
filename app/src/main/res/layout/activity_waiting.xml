@@ -19,7 +19,7 @@
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content"
         app:itemTextColor="@color/white"
-        android:background="@drawable/navigation_custom"
+        android:background="@color/gray"
         app:backgroundTint="@null"
         android:padding="5dp">
 

@@ -77,7 +77,7 @@ public class DiscountAdapter extends BaseAdapter {
         holder.txtDiscountNumber.setText(d.getPercent() + "%");
         holder.txtProductName.setText(d.getProduct_Name());
         holder.txtProductType.setText(d.getProduct_Type());
-        holder.txtProductPrice.setText(String.valueOf(d.getPrice()) + "VND");
+        holder.txtProductPrice.setText(String.valueOf(d.getPrice()) + " VND");
 
         // Chuyển byte[] --> bitmap
         byte[] discountImage = d.getDiscount_Image();

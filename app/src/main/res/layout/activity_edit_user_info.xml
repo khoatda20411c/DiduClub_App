@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUserInfoActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Chỉnh sửa thông tin"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/imv_EditAvatar_EditUserInfoActivity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_sample_shirt"/>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imv_EditClass_EditUserInfoActivity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_gold"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thành viên:"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_EditClass_EditUserInfoActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="vàng"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_EditPoint_EditUserInfoActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tích lũy được: 21000 điểm"
+            android:textSize="20sp"
+            android:textColor="@color/gray"
+            android:gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/shadow_button_layer_list"
+            app:backgroundTint = "@null"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:padding="15dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Tên"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center|left"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+
+                <EditText
+                    android:id="@+id/edt_EditLastName_EditUserInfoActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Đinh"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+                <EditText
+                    android:id="@+id/edt_EditFirstName_EditUserInfoActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Văn"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/shadow_button_layer_list"
+            app:backgroundTint = "@null"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:padding="15dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Giới tính"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center|left"/>
+
+            <EditText
+                android:id="@+id/edt_EditUserSex_EditUserInfoActivity"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="40dp"
+                android:text="Nam"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/shadow_button_layer_list"
+            app:backgroundTint = "@null"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:padding="15dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="SĐT"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center|left"/>
+
+            <EditText
+                android:id="@+id/edt_EditPhone_EditUserInfoActivity"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="50dp"
+                android:text="0123.4567.89"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/shadow_button_layer_list"
+            app:backgroundTint = "@null"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:padding="15dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Ngày sinh"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center|left"/>
+
+            <EditText
+                android:id="@+id/edt_EditDate_EditUserInfoActivity"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="50dp"
+                android:text="22 - 05 - 2002"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_EditUpdate_EditUserInfoActivity"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/custom_shadow_modify_button"
+            android:layout_marginTop="30dp"
+            app:backgroundTint= "@null"
+            android:text="Cập nhật"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</ScrollView>

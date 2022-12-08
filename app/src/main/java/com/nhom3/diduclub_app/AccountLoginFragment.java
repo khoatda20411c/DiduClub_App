@@ -2,7 +2,6 @@ package com.nhom3.diduclub_app;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
@@ -20,7 +19,7 @@ import android.widget.Toast;
 
 import com.nhom3.Database.Database;
 
-public class AccountActivity extends Fragment {
+public class AccountLoginFragment extends Fragment {
     ImageView imvAccountAvatar_activity_account;
     TextView txtAccountLastName_activity_account ,txtAccountFirstName_activity_account, txtAccountEmail_activity_account,
             txtAccountRate_activity_account, txtAccountPoint_activity_account;
@@ -41,7 +40,7 @@ public class AccountActivity extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.activity_account, container, false);
+        view = inflater.inflate(R.layout.fragment_accountlogin, container, false);
         linkViews();
         addEvents();
 
@@ -52,7 +51,7 @@ public class AccountActivity extends Fragment {
 
     private void getData() {
         Cursor cursor = LoadingActivity.database.rawQuery(" SELECT Last_Name, First_Name, Email, Customer_Type, Avatar FROM Account WHERE Account_ID = ? ",
-                new String[]{"DC04"});
+                new String[]{"DC03"});
         while (cursor.moveToNext()) {
             String Acclastname = cursor.getString(0);
             String Accfirstname = cursor.getString(1);
@@ -62,10 +61,13 @@ public class AccountActivity extends Fragment {
             Bitmap bitmap = BitmapFactory.decodeByteArray(AccImage, 0, AccImage.length);
             imvAccountAvatar_activity_account.setImageBitmap(bitmap);
 
+
+
             txtAccountLastName_activity_account.setText(Acclastname);
             txtAccountFirstName_activity_account.setText(Accfirstname);
             txtAccountEmail_activity_account.setText(Accemail);
             txtAccountRate_activity_account.setText(AccType);
+
         }
         cursor.close();
     }
@@ -74,14 +76,15 @@ public class AccountActivity extends Fragment {
         btnPersonalInfo_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), UserInfoActivity.class);
+                startActivity(intent);
             }
         });
 
         btnHistoryOrder_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),HistorycardActivity.class);
+                Intent intent=new Intent(getActivity(), OrderHistoryActivity.class);
                 startActivity(intent);
 
             }
@@ -99,7 +102,7 @@ public class AccountActivity extends Fragment {
         btnAccountSetting_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent4=new Intent(getActivity(),AccountSettingFragment.class);
+                Intent intent4=new Intent(getActivity(), AccountSettingActivity.class);
                 startActivity(intent4);
 
             }

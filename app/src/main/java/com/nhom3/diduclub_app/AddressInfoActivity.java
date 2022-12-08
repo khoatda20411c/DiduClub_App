@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -48,7 +46,7 @@ public class AddressInfoActivity extends AppCompatActivity {
         imvBack_activity_address_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(AddressInfoActivity.this, AccountSettingFragment.class);
+                intent = new Intent(AddressInfoActivity.this, AccountSettingActivity.class);
                 startActivity(intent);
             }
         });
