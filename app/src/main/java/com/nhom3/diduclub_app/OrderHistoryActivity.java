@@ -10,14 +10,13 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TabHost;
 
-import com.google.android.material.tabs.TabLayout;
 import com.nhom3.Adapters.OrderHistoryAdapter;
 import com.nhom3.Database.Database;
 import com.nhom3.Models.OrderHistoryModel;
 
 import java.util.ArrayList;
 
-public class HistorycardActivity extends AppCompatActivity {
+public class OrderHistoryActivity extends AppCompatActivity {
     ImageView imvBack_activity_historycard;
     ListView lvAllHistoryOrder_activity_historycard, lvConfirmHistoryOrder_activity_historycard,
             lvDeliveringHistoryOrder_activity_historycard, lvReceivedHistoryOrder_activity_historycard,
@@ -32,7 +31,7 @@ public class HistorycardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_historycard);
+        setContentView(R.layout.activity_orderhistory);
 
         linkViews();
         defineTabHost();
@@ -41,7 +40,7 @@ public class HistorycardActivity extends AppCompatActivity {
         imvBack_activity_historycard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(HistorycardActivity.this,MainLoginActivity.class);
+                Intent intent=new Intent(OrderHistoryActivity.this,MainLoginActivity.class);
                 startActivity(intent);
 
             }
@@ -52,7 +51,7 @@ public class HistorycardActivity extends AppCompatActivity {
 
         /*-------------tab tất cả--------------*/
         arrayList = new ArrayList<OrderHistoryModel>();
-        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
+        adapter = new OrderHistoryAdapter(OrderHistoryActivity.this, R.layout.history_item_card_list, arrayList);
         lvAllHistoryOrder_activity_historycard.setAdapter(adapter);
 
 //        Cursor cursor = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory WHERE Account_ID = ? ",new String[]{"DC01"});
@@ -82,7 +81,7 @@ public class HistorycardActivity extends AppCompatActivity {
 
         /*-------------tab chờ xác nhận--------------*/
         arrayList = new ArrayList<OrderHistoryModel>();
-        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
+        adapter = new OrderHistoryAdapter(OrderHistoryActivity.this, R.layout.history_item_card_list, arrayList);
         lvConfirmHistoryOrder_activity_historycard.setAdapter(adapter);
 
 //        Cursor cursor2 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory WHERE Account_ID = ? and Status = ? ",new String[]{"DC01", "Chờ xác nhận"});
@@ -113,7 +112,7 @@ public class HistorycardActivity extends AppCompatActivity {
 
         /*-------------tab đang giao hàng--------------*/
         arrayList = new ArrayList<OrderHistoryModel>();
-        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
+        adapter = new OrderHistoryAdapter(OrderHistoryActivity.this, R.layout.history_item_card_list, arrayList);
         lvDeliveringHistoryOrder_activity_historycard.setAdapter(adapter);
 
 //        Cursor cursor3 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory WHERE Account_ID = ? and Status = ? ",new String[]{"DC01", "Đang giao hàng"});
@@ -144,7 +143,7 @@ public class HistorycardActivity extends AppCompatActivity {
 
         /*-------------tab đã nhận hàng--------------*/
         arrayList = new ArrayList<OrderHistoryModel>();
-        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
+        adapter = new OrderHistoryAdapter(OrderHistoryActivity.this, R.layout.history_item_card_list, arrayList);
         lvReceivedHistoryOrder_activity_historycard.setAdapter(adapter);
 
 //        Cursor cursor4 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory WHERE Account_ID = ? and Status = ? ",new String[]{"DC01", "Đã nhận hàng"});
@@ -174,7 +173,7 @@ public class HistorycardActivity extends AppCompatActivity {
 
         /*-------------tab đã hủy--------------*/
         arrayList = new ArrayList<OrderHistoryModel>();
-        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
+        adapter = new OrderHistoryAdapter(OrderHistoryActivity.this, R.layout.history_item_card_list, arrayList);
         lvCancelledHistoryOrder_activity_historycard.setAdapter(adapter);
 
 //        Cursor cursor5 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory WHERE Account_ID = ? and Status = ? ",new String[]{"DC01", "Đã hủy"});

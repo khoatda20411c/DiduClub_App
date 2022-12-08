@@ -80,7 +80,7 @@ public class AccountLoginFragment extends Fragment {
         btnHistoryOrder_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),HistorycardActivity.class);
+                Intent intent=new Intent(getActivity(), OrderHistoryActivity.class);
                 startActivity(intent);
 
             }

@@ -3,6 +3,7 @@ package com.nhom3.diduclub_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -129,7 +130,10 @@ public class SuppportCenterActivity extends AppCompatActivity {
         btnCallToSeller_fragment_directly_advice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                Uri uri = Uri.parse("tel:" + "0987654321");
+                intent.setData(uri);
+                startActivity(intent);
             }
         });
     }
