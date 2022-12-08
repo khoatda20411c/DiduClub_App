@@ -22,7 +22,6 @@ public class SuppportCenterActivity extends AppCompatActivity {
             txtG_Question3_fragment_general_information, txtG_Question4_fragment_general_information,
             txtG_Question5_fragment_general_information;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
