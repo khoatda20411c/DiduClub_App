@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.nhom3.Adapters.ViewPagerAdapter;
 import com.nhom3.Adapters.ViewPagerloginAdapter;
+import com.nhom3.Models.ProductModel;
 
 public class MainLoginActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -84,6 +86,15 @@ public class MainLoginActivity extends AppCompatActivity {
         mViewpager.setAdapter(viewloginPagerAdapter);
 
     }
+//    public void dataFlow(ProductModel p) {
+//        FragmentTransaction transaction=manager.beginTransaction();
+//        fragment_productinfomation fragment=new fragment_productinfomation();
+//        fragment.Getdata(p);
+//        transaction.replace(R.id.fragment_mainlogin_acti,fragment);
+//        transaction.addToBackStack(null);
+//        transaction.commit();
+//
+//    }
 
     private void Linkview() {
         bottomNavigationView = findViewById(R.id.bottom_navigation_nar);

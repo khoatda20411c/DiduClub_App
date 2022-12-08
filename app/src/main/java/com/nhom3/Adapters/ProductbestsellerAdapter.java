@@ -1,16 +1,20 @@
 package com.nhom3.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nhom3.Models.ProductModel;
+import com.nhom3.diduclub_app.ProductinfoActivity;
 import com.nhom3.diduclub_app.R;
 import com.nhom3.diduclub_app.fragment_main;
 
@@ -44,6 +48,7 @@ public class ProductbestsellerAdapter extends BaseAdapter {
     private class ViewHolder{
         TextView txtten_bestsellerproductitem,txtdanhmuc_bestsellerproductitem,txtprice_bestsellerproductitem;
         ImageView img_bestsellerproductitem;
+        GridView gvhienthihotproduct;
 
 
     }
@@ -58,6 +63,7 @@ public class ProductbestsellerAdapter extends BaseAdapter {
             holder.txtten_bestsellerproductitem= convertView.findViewById(R.id.txtten_bestsellerproductitem);
             holder.txtdanhmuc_bestsellerproductitem=convertView.findViewById(R.id.txtdanhmuc_bestsellerproductitem);
             holder.txtprice_bestsellerproductitem=convertView.findViewById(R.id.txtprice_bestsellerproductitem);
+            holder.gvhienthihotproduct=convertView.findViewById(R.id.gv_HotProduct_fragment_main);
 
             holder.img_bestsellerproductitem=convertView.findViewById(R.id.img_bestsellerproductitem);
 
@@ -73,6 +79,14 @@ public class ProductbestsellerAdapter extends BaseAdapter {
         byte[] hinhanh =sanpham.getProduct_Photo();
         Bitmap bitmap= BitmapFactory.decodeByteArray(hinhanh,0,hinhanh.length);
         holder.img_bestsellerproductitem.setImageBitmap(bitmap);
+//        holder.gvhienthihotproduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent=new Intent(context, ProductinfoActivity.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                context.startActivity(intent);
+//            }
+//        });
 
 
         return convertView;

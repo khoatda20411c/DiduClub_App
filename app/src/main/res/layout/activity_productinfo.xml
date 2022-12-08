@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".ProductinfomationActivity">
+    >
 
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="380dp"
         android:scaleX="1.1"
+        android:id="@+id/imghinhanhproductinfo"
         android:src="@drawable/ao_quan">
 
     </ImageView>
@@ -48,6 +49,7 @@
         android:padding="20dp"
         android:layout_height="match_parent">
         <TextView
+            android:id="@+id/txtnameproduct_actiproductinfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
@@ -193,6 +195,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
+
                 android:layout_width="wrap_content"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -216,20 +219,24 @@
             android:layout_marginTop="350dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <Button
                 android:layout_width="wrap_content"
-                android:text="Mua ngay"
+                android:layout_height="wrap_content"
                 android:background="@drawable/shape_radius_button"
-                android:layout_height="wrap_content">
+                android:text="Mua ngay"
+                tools:ignore="TouchTargetSizeCheck">
 
             </Button>
+
             <Button
                 android:layout_width="wrap_content"
-                android:backgroundTint="@null"
-                android:background="@drawable/shape_radius_button"
-                android:text="Thêm vào giỏ hàng"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
-                android:layout_height="wrap_content">
+                android:background="@drawable/shape_radius_button"
+                android:backgroundTint="@null"
+                android:text="Thêm vào giỏ hàng"
+                tools:ignore="TouchTargetSizeCheck">
 
             </Button>
         </LinearLayout>
