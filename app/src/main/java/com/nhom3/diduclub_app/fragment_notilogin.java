@@ -21,7 +21,7 @@ import com.nhom3.Models.OrderHistoryModel;
 
 import java.util.ArrayList;
 
-public class fragment_notilogin extends AppCompatActivity {
+public class fragment_notilogin extends Fragment {
     TextView txtAllNoti_fragment_notilogin, txtSeenNoti_fragment_notilogin, txtNotSeenNoti_fragment_notilogin;
     ListView lvNotiList_fragment_notilogin, lvNotiListSeen_fragment_notilogin, lvNotiListNotSeen_fragment_notilogin;
     View view = null;
@@ -31,44 +31,45 @@ public class fragment_notilogin extends AppCompatActivity {
 
     Database database;
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_notilogin);
+//    @Override
+//    protected void onCreate(@Nullable Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.fragment_notilogin);
+//
+//        linkViews();
+//        defineTabHost();
+//
+///*        arrayList = new ArrayList<NotificationModel>();
+//
+//        adapter = new NotificationAdapter(this, R.layout.item_noti_login, arrayList);
+//        lvNotiList_fragment_notilogin.setAdapter(adapter);*/
+//
+//        getData();
+//
+//    }
 
-        linkViews();
-        defineTabHost();
-
-/*        arrayList = new ArrayList<NotificationModel>();
-
-        adapter = new NotificationAdapter(this, R.layout.item_noti_login, arrayList);
-        lvNotiList_fragment_notilogin.setAdapter(adapter);*/
-
-        getData();
-
-    }
-
-/*    @Nullable
+    @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view =  inflater.inflate(R.layout.fragment_notilogin , container, false);
 
         linkViews();
-        arrayList = new ArrayList<NotificationModel>();
-
-        adapter = new NotificationAdapter(getContext(), R.layout.item_noti_login, arrayList);
-        lvNotiList_fragment_notilogin.setAdapter(adapter);
+        defineTabHost();
+//        arrayList = new ArrayList<NotificationModel>();
+//
+//        adapter = new NotificationAdapter(getContext(), R.layout.item_noti_login, arrayList);
+//        lvNotiList_fragment_notilogin.setAdapter(adapter);
 
         getData();
-        addEvents();
+
 
         return view;
-    }*/
+    }
 
     private void getData() {
         /*tab tất cả thông báo*/
         arrayList = new ArrayList<NotificationModel>();
-        adapter = new NotificationAdapter(fragment_notilogin.this, R.layout.item_noti_login, arrayList);
+        adapter = new NotificationAdapter(getContext(), R.layout.item_noti_login, arrayList);
         lvNotiList_fragment_notilogin.setAdapter(adapter);
         Cursor cursor= LoadingActivity.database.rawQuery(" SELECT * FROM Notification ",null);
         arrayList.clear();
@@ -85,7 +86,7 @@ public class fragment_notilogin extends AppCompatActivity {
 
         /*tab thông báo đã xem*/
         arrayList = new ArrayList<NotificationModel>();
-        adapter = new NotificationAdapter(fragment_notilogin.this, R.layout.item_noti_login, arrayList);
+        adapter = new NotificationAdapter(getContext(), R.layout.item_noti_login, arrayList);
         lvNotiListSeen_fragment_notilogin.setAdapter(adapter);
         Cursor cursorseen= LoadingActivity.database.rawQuery(" SELECT * FROM Notification WHERE Noti_type = ? ",new String[]{"Đã xem"});
         arrayList.clear();
@@ -102,7 +103,7 @@ public class fragment_notilogin extends AppCompatActivity {
 
         /*tab thông báo chưa xem*/
         arrayList = new ArrayList<NotificationModel>();
-        adapter = new NotificationAdapter(fragment_notilogin.this, R.layout.item_noti_login, arrayList);
+        adapter = new NotificationAdapter(getContext(), R.layout.item_noti_login, arrayList);
         lvNotiListNotSeen_fragment_notilogin.setAdapter(adapter);
         Cursor cursornotseen= LoadingActivity.database.rawQuery(" SELECT * FROM Notification WHERE Noti_type = ? ",new String[]{"Chưa xem"});
         arrayList.clear();
@@ -120,7 +121,7 @@ public class fragment_notilogin extends AppCompatActivity {
 
     private void defineTabHost() {
         // initiating the tabhost
-        TabHost tabhost = findViewById(R.id.th_NotiLogin_fragment_notilogin);
+        TabHost tabhost = view.findViewById(R.id.th_NotiLogin_fragment_notilogin);
 
         // setting up the tab host
         tabhost.setup();
@@ -151,21 +152,21 @@ public class fragment_notilogin extends AppCompatActivity {
     }
 
     private void linkViews() {
-/*        txtAllNoti_fragment_notilogin = view.findViewById(R.id.txt_AllNoti_fragment_notilogin);
+        txtAllNoti_fragment_notilogin = view.findViewById(R.id.txt_AllNoti_fragment_notilogin);
         txtSeenNoti_fragment_notilogin = view.findViewById(R.id.txt_SeenNoti_fragment_notilogin);
         txtNotSeenNoti_fragment_notilogin = view.findViewById(R.id.txt_NotSeenNoti_fragment_notilogin);
 
         lvNotiList_fragment_notilogin = view.findViewById(R.id.lv_NotiList_fragment_notilogin);
         lvNotiListSeen_fragment_notilogin = view.findViewById(R.id.lv_NotiListSeen_fragment_notilogin);
-        lvNotiListNotSeen_fragment_notilogin = view.findViewById(R.id.lv_NotiListNotSeen_fragment_notilogin);*/
+        lvNotiListNotSeen_fragment_notilogin = view.findViewById(R.id.lv_NotiListNotSeen_fragment_notilogin);
 
-        txtAllNoti_fragment_notilogin = findViewById(R.id.txt_AllNoti_fragment_notilogin);
-        txtSeenNoti_fragment_notilogin = findViewById(R.id.txt_SeenNoti_fragment_notilogin);
-        txtNotSeenNoti_fragment_notilogin = findViewById(R.id.txt_NotSeenNoti_fragment_notilogin);
-
-        lvNotiList_fragment_notilogin = findViewById(R.id.lv_NotiList_fragment_notilogin);
-        lvNotiListSeen_fragment_notilogin = findViewById(R.id.lv_NotiListSeen_fragment_notilogin);
-        lvNotiListNotSeen_fragment_notilogin = findViewById(R.id.lv_NotiListNotSeen_fragment_notilogin);
+//        txtAllNoti_fragment_notilogin = findViewById(R.id.txt_AllNoti_fragment_notilogin);
+//        txtSeenNoti_fragment_notilogin = findViewById(R.id.txt_SeenNoti_fragment_notilogin);
+//        txtNotSeenNoti_fragment_notilogin = findViewById(R.id.txt_NotSeenNoti_fragment_notilogin);
+//
+//        lvNotiList_fragment_notilogin = findViewById(R.id.lv_NotiList_fragment_notilogin);
+//        lvNotiListSeen_fragment_notilogin = findViewById(R.id.lv_NotiListSeen_fragment_notilogin);
+//        lvNotiListNotSeen_fragment_notilogin = findViewById(R.id.lv_NotiListNotSeen_fragment_notilogin);
 
     }
 }

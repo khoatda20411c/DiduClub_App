@@ -27,6 +27,8 @@ public class AccountSettingFragment extends AppCompatActivity {
         imvBack_fragment_account_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent12=new Intent(AccountSettingFragment.this,AccountActivity.class);
+                startActivity(intent12);
 
             }
         });

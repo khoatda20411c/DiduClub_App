@@ -221,6 +221,7 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/btnordernow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_radius_button"
@@ -235,6 +236,7 @@
                 android:layout_marginLeft="40dp"
                 android:background="@drawable/shape_radius_button"
                 android:backgroundTint="@null"
+                android:id="@+id/btnaddproducttocart"
                 android:text="Thêm vào giỏ hàng"
                 tools:ignore="TouchTargetSizeCheck">
 

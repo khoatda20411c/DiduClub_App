@@ -2,6 +2,7 @@ package com.nhom3.diduclub_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,7 @@ public class HistorycardActivity extends AppCompatActivity {
 
     Database database;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +45,8 @@ public class HistorycardActivity extends AppCompatActivity {
         imvBack_activity_historycard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent=new Intent(HistorycardActivity.this,MainLoginActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -109,5 +113,6 @@ public class HistorycardActivity extends AppCompatActivity {
         imvBack_activity_historycard = findViewById(R.id.imv_Back_activity_historycard);
 
         lvAllHistoryOrder_activity_historycard = findViewById(R.id.lv_AllHistoryOrder_activity_historycard);
+
     }
 }

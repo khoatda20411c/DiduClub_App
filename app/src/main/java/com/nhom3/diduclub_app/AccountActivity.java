@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nhom3.Database.Database;
 
@@ -80,6 +81,8 @@ public class AccountActivity extends Fragment {
         btnHistoryOrder_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),HistorycardActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -87,6 +90,8 @@ public class AccountActivity extends Fragment {
         btnVoucherList_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent7=new Intent(getActivity(),VoucherActivity.class);
+                startActivity(intent7);
 
             }
         });
@@ -94,6 +99,8 @@ public class AccountActivity extends Fragment {
         btnAccountSetting_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent4=new Intent(getActivity(),AccountSettingFragment.class);
+                startActivity(intent4);
 
             }
         });
@@ -101,6 +108,8 @@ public class AccountActivity extends Fragment {
         btnSupportAndRule_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent inten10=new Intent(getActivity(),SuppportCenterActivity.class);
+                startActivity(inten10);
 
             }
         });
@@ -108,6 +117,9 @@ public class AccountActivity extends Fragment {
         btnLogout_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),MainActivity.class);
+                startActivity(intent);
+                Toast.makeText(getContext(), "Đăng xuất thành công", Toast.LENGTH_SHORT).show();
 
             }
         });
