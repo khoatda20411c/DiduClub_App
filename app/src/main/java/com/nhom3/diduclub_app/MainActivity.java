@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.account:
-                        mViewpager.setCurrentItem(0);
-                        Toast.makeText(MainActivity.this, "Login now", Toast.LENGTH_SHORT).show();
+                        mViewpager.setCurrentItem(4);
+
                         break;
                 }
                 return true;
@@ -114,6 +114,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 3:
                         bottomNavigationView.getMenu().findItem(R.id.notifications).setChecked(true);
+                        break;
+                    case 4:
+                        bottomNavigationView.getMenu().findItem(R.id.account).setChecked(true);
                         break;
                 }
 

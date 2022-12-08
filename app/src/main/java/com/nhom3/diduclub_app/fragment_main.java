@@ -57,7 +57,17 @@ public class fragment_main extends Fragment {
         gv_HotProduct_fragment_main.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(), position+"", Toast.LENGTH_SHORT).show();
+//                ProductInterface myInterface= (ProductInterface) getActivity();
+//                if(myInterface != null){
+//                    myInterface.dataFlow(arrayList.get(position));
+//                }
+
+                Intent intent=new Intent(getActivity(),ProductinfoActivity.class);
+                Bundle bundle=new Bundle();
+                ProductModel sanphammoi=arrayList.get(position);
+                bundle.putSerializable("productinfo",sanphammoi);
+                intent.putExtra("productbundle",bundle);
+                startActivity(intent);
             }
         });
 
