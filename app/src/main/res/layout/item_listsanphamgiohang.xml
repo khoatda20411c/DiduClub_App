@@ -1,113 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:padding="20dp"
+    android:orientation="horizontal"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/custom_itemsanphamgiohang"
-    android:layout_height="200dp">
+    android:layout_margin="5dp"
+    android:layout_gravity="center"
+    android:background="@drawable/custom_item_cart"
+    android:weightSum="10"
+    android:layout_height="150dp">
 
     <CheckBox
-        android:layout_width="wrap_content"
 
-        android:layout_marginTop="70dp"
-        android:layout_height="wrap_content">
+        android:layout_weight="1"
+        android:id="@+id/chkcheckprodduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
 
     </CheckBox>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:id="@+id/imghinhanhsanphamgiohang">
-
-    </ImageView>
-    <ImageView
-        android:id="@+id/imv_DelateProduct_item_listsanphamgiohang"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="370dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/ic_baseline_delete_24">
-
-    </ImageView>
-    <TextView
-        android:id="@+id/txt_ProductPrice_item_listsanphamgiohang"
-        android:layout_width="150dp"
-        android:gravity="center"
-        android:layout_marginTop="130dp"
-        android:layout_marginLeft="230dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="26dp"
-        app:backgroundTint="@null"
-        android:padding="10dp"
-        android:background="@drawable/custom_itemsanphamgiohang"
-        android:text="325.000">
-
-    </TextView>
-    <ImageView
-        android:background="@drawable/custom_image_cart"
-        app:backgroundTint="@null"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="50dp"
-        android:layout_width="80dp"
-        android:src="@drawable/img5568_copy_dimmed"
-        android:layout_height="100dp">
-
-    </ImageView>
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_weight="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:background="@drawable/custom_image_cart"
+            app:backgroundTint="@null"
+
+            android:id="@+id/imghinhanhcart"
+            android:layout_width="100dp"
+            android:src="@drawable/img5568_copy_dimmed"
+            android:layout_height="120dp">
+
+        </ImageView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="5"
         android:layout_width="wrap_content"
         android:orientation="vertical"
         app:backgroundTint="@null"
-        android:background="@drawable/custom_itemsanphamgiohang"
-        android:layout_marginLeft="150dp"
         android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/txt_ProductName_item_listsanphamgiohang"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="26dp"
+            android:textSize="18dp"
             android:textColor="@color/black"
             android:text="Di du pha phach">
 
         </TextView>
         <TextView
-            android:layout_marginLeft="10dp"
+            android:id="@+id/txtdanhmucsanphamcart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Di du pha phach">
 
         </TextView>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="150dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="3dp"
-        app:backgroundTint="@null"
-        android:background="@drawable/custom_itemsanphamgiohang">
-        <ImageView
-            android:layout_width="10dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/minus">
-
-        </ImageView>
         <TextView
+            android:id="@+id/txt_ProductPrice_item_listsanphamgiohang"
+            android:layout_width="150dp"
             android:gravity="center"
-            android:layout_width="25dp"
             android:layout_height="wrap_content"
-            android:text="1"></TextView>
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_add_24">
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:backgroundTint="@null"
+            android:padding="10dp"
 
-        </ImageView>
+            android:text="325.000">
+
+        </TextView>
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@null"
+            >
+            <ImageView
+                android:layout_width="10dp"
+                android:id="@+id/imggiamsanpham"
+                android:layout_height="wrap_content"
+                android:src="@drawable/minus">
+
+            </ImageView>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/txtsoluongsanphamcart"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="1"></TextView>
+            <ImageView
+                android:layout_width="15dp"
+                android:id="@+id/imgtangsanpham"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_24">
+
+            </ImageView>
+
+        </LinearLayout>
 
     </LinearLayout>
+    <ImageView
+        android:layout_weight="1"
+        android:layout_marginTop="40dp"
+        android:id="@+id/imv_DelateProduct_item_listsanphamgiohang"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
 
-</RelativeLayout>
+        android:src="@drawable/ic_baseline_delete_24">
+
+    </ImageView>
+
+
+</LinearLayout>

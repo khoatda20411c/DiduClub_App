@@ -9,14 +9,16 @@ public class CartModel implements Serializable {
     private Double Product_Quantity;
     private Double Product_Price;
     private String Product_Type;
+    private byte[] Product_photo;
 
-    public CartModel(String card_ID, String account_ID, String product_Name, Double product_Quantity, Double product_Price, String product_Type) {
+    public CartModel(String card_ID, String account_ID, String product_Name, Double product_Quantity, Double product_Price, String product_Type, byte[] product_photo) {
         Card_ID = card_ID;
         Account_ID = account_ID;
         Product_Name = product_Name;
         Product_Quantity = product_Quantity;
         Product_Price = product_Price;
         Product_Type = product_Type;
+        Product_photo = product_photo;
     }
 
     public String getCard_ID() {
@@ -65,5 +67,13 @@ public class CartModel implements Serializable {
 
     public void setProduct_Type(String product_Type) {
         Product_Type = product_Type;
+    }
+
+    public byte[] getProduct_photo() {
+        return Product_photo;
+    }
+
+    public void setProduct_photo(byte[] product_photo) {
+        Product_photo = product_photo;
     }
 }
