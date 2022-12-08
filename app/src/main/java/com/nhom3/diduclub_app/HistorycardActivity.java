@@ -151,7 +151,6 @@ public class HistorycardActivity extends AppCompatActivity {
 
         Cursor cursor4 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory ",null);
 
-
         arrayList.clear();
 
         while (cursor4.moveToNext()) {
