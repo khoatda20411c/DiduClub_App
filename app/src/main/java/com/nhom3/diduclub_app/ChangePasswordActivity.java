@@ -25,36 +25,35 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
         linkViews();
         addEvents();
-        valid();
-        comparePassWord();
+
     }
 
-    private boolean valid() {
-        String passwordInput=edtNewPassWord_activity_change_password.getText().toString().trim();
-        if (passwordInput.isEmpty()) {
-            return false;
-        } else if (passwordInput.length() < 6) {
-            return false;
-        }
-        else {
-            edtReTypePassWord_activity_change_password.setError(null,null);
-            return true;
-        }
-    }
+//    private boolean valid() {
+//        String passwordInput=edtNewPassWord_activity_change_password.getText().toString().trim();
+//        if (passwordInput.isEmpty()) {
+//            return false;
+//        } else if (passwordInput.length() < 6) {
+//            return false;
+//        }
+//        else {
+//            edtReTypePassWord_activity_change_password.setError(null,null);
+//            return true;
+//        }
+//    }
 
-    private boolean comparePassWord() {
-        String passwordComPare= edtNewPassWord_activity_change_password.getText().toString().trim();
-        if (passwordComPare.isEmpty()) {
-            return false;
-        } else if (passwordComPare.length() < 6) {
-            return false;
-        }else if (!edtNewPassWord_activity_change_password.getText().toString().equals(edtReTypePassWord_activity_change_password.getText().toString())) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
+//    private boolean comparePassWord() {
+//        String passwordComPare= edtNewPassWord_activity_change_password.getText().toString().trim();
+//        if (passwordComPare.isEmpty()) {
+//            return false;
+//        } else if (passwordComPare.length() < 6) {
+//            return false;
+//        }else if (!edtNewPassWord_activity_change_password.getText().toString().equals(edtReTypePassWord_activity_change_password.getText().toString())) {
+//            return false;
+//        }
+//        else {
+//            return true;
+//        }
+//    }
 
 
 
@@ -69,37 +68,37 @@ public class ChangePasswordActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-               checked();
-               Intent intent=new Intent(ChangePasswordActivity.this,MainLoginActivity.class);
+//               checked();
+//               Intent intent=new Intent(ChangePasswordActivity.this,MainLoginActivity.class);
 
+//
+//                if(!edtNewPassWord_activity_change_password.getText().toString().equals(edtReTypePassWord_activity_change_password.getText().toString()))
+//                {
+////                    startActivity(intent);
+//                }
+//                else{
+//                    Toast.makeText(ChangePasswordActivity.this, "BẠN HÃY KIỂM TRA LẠI THÔNG TIN", Toast.LENGTH_SHORT).show();
+//                }
 
-                if(!edtNewPassWord_activity_change_password.getText().toString().equals(edtReTypePassWord_activity_change_password.getText().toString()))
-                {
-                    startActivity(intent);
-                }
-                else{
-                    Toast.makeText(ChangePasswordActivity.this, "BẠN HÃY KIỂM TRA LẠI THÔNG TIN", Toast.LENGTH_SHORT).show();
-                }
-
-//                Intent intent = new Intent(ChangePasswordActivity.this,MainLoginActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(ChangePasswordActivity.this,MainLoginActivity.class);
+                startActivity(intent);
             }
         });
     }
-    private void checked(){
-        if (edtNewPassWord_activity_change_password.length() ==0 ) {
-            edtNewPassWord_activity_change_password.setError("Vui lòng nhập đầy đủ thông tin!",null);
-        }else if (edtNewPassWord_activity_change_password.length() < 6) {
-            edtNewPassWord_activity_change_password.setError("Mật khẩu sai cú pháp",null);
-        }else if (edtReTypePassWord_activity_change_password.length() ==0 ) {
-            edtReTypePassWord_activity_change_password.setError("Vui lòng nhập đầy đủ thông tin",null);
-        }else if (edtReTypePassWord_activity_change_password.length() < 6) {
-            edtReTypePassWord_activity_change_password.setError("Mật khẩu sai cú pháp",null);
-        } else if (!edtNewPassWord_activity_change_password.getText().toString().equals(edtReTypePassWord_activity_change_password.getText().toString()) ) {
-            edtReTypePassWord_activity_change_password.setError("Mật khẩu không trùng khớp",null);
-        }
-
-    }
+//    private void checked(){
+//        if (edtNewPassWord_activity_change_password.length() ==0 ) {
+//            edtNewPassWord_activity_change_password.setError("Vui lòng nhập đầy đủ thông tin!",null);
+//        }else if (edtNewPassWord_activity_change_password.length() < 6) {
+//            edtNewPassWord_activity_change_password.setError("Mật khẩu sai cú pháp",null);
+//        }else if (edtReTypePassWord_activity_change_password.length() ==0 ) {
+//            edtReTypePassWord_activity_change_password.setError("Vui lòng nhập đầy đủ thông tin",null);
+//        }else if (edtReTypePassWord_activity_change_password.length() < 6) {
+//            edtReTypePassWord_activity_change_password.setError("Mật khẩu sai cú pháp",null);
+//        } else if (!edtNewPassWord_activity_change_password.getText().toString().equals(edtReTypePassWord_activity_change_password.getText().toString()) ) {
+//            edtReTypePassWord_activity_change_password.setError("Mật khẩu không trùng khớp",null);
+//        }
+//
+//    }
 
     private void GetData(){
         Intent intent = getIntent();

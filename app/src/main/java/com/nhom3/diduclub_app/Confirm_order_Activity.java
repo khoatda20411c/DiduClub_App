@@ -1,5 +1,6 @@
 package com.nhom3.diduclub_app;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,9 +32,10 @@ public class Confirm_order_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_order);
-        GetData();
+
 
         linkViews();
+        GetData();
         addEvents();
 
     }
@@ -41,26 +44,20 @@ public class Confirm_order_Activity extends AppCompatActivity {
         imv_btnBackToCart_activity_comfirm_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Confirm_order_Activity.this,MainLoginActivity.class);
+                startActivity(intent);
             }
+
         });
 
         btnDatHang_activity_comfirm_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-//                int  idAccount = dataOrder.getInt(1);
-//                int idOrder = dataOrder.getInt(0);
-//                String address = dataOrder.getString(2);
-//                String payment = dataOrder.getString(3);
-//                String voucher = dataOrder.getString(4);
-//                int total = dataOrder.getInt(5);
-//                String name = dataOrder.getString(6);
-//                String phone =dataOrder.getString(7);
+                Toast.makeText(Confirm_order_Activity.this, "Đặt hàng thành công", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(Confirm_order_Activity.this,MainLoginActivity.class);
+                startActivity(intent);
 
-                String ten = txtName_activity_comfirm_order.getText().toString();
-                String phone = txtPhoneNumber_activity_comfirm_order.getText().toString();
-//
 
             }
         });
@@ -92,7 +89,7 @@ public class Confirm_order_Activity extends AppCompatActivity {
 
     private void GetData(){
 
-        Cursor dataOrder = LoadingActivity.database.rawQuery("SELECT * FROM Order WHERE Account_ID =?",new String[]{"DC01"});
+        Cursor dataOrder = LoadingActivity.database.rawQuery("SELECT * FROM 'Order' WHERE Account_ID =?",new String[]{"DC01"});
 
         while (dataOrder.moveToNext()){
             String order_ID = dataOrder.getString(0);
@@ -107,6 +104,9 @@ public class Confirm_order_Activity extends AppCompatActivity {
             txtName_activity_comfirm_order.setText(first_name);
             txtPhoneNumber_activity_comfirm_order.setText(phone);
             txtShippingAddress_activity_comfirm_order.setText(address);
+            radDelivery_activity_comfirm_order.isChecked();
+            txtVoucherName_activity_comfirm_order.setText(applied_Voucher);
+            txtToTalProductPrice_activity_comfirm_order.setText(String.valueOf(total_Price));
 
 
         }

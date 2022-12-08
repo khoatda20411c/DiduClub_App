@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,24 +21,48 @@ public class ChangePinActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_pin);
-
         linkViews();
         GetData();
         addEvents();
-        comparePin();
+
+
     }
 
+    private boolean checked() {
+        String pass= edtCurrentPassword_activity_change_pin.getText().toString().trim();
+        String pin = edtCurrentPin_activity_change_pin.getText().toString().trim();
+        if (pass.isEmpty()) {
+            Toast.makeText(this, "Vui lòng cung cấp đủ thông tin", Toast.LENGTH_SHORT).show();
+            return false;
+        } else if (pass.length() < 6) {
+            Toast.makeText(this, "Định dạng mật khẩu sai", Toast.LENGTH_SHORT).show();
+            return false;
+        } else if (pin.isEmpty()) {
+            Toast.makeText(this, "Vui lòng cung cấp đủ thông tin", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if (pin.length() < 6) {
+            Toast.makeText(this, "Định dạng mã Pin sai", Toast.LENGTH_SHORT).show();
+            return false;
+        }else {
+            return true;
+        }
+
+
+    }
 
 
     private boolean comparePin() {
         String pinCompare= edtPinNew_activity_change_pin.getText().toString().trim();
         if (pinCompare.isEmpty()) {
+            Toast.makeText(this, "Vui lòng cung cấp đủ thông tin", Toast.LENGTH_SHORT).show();
             return false;
         } else if (pinCompare.length() < 6) {
+            Toast.makeText(this, "Định dạng mật khẩu sai", Toast.LENGTH_SHORT).show();
             return false;
         }else if (!edtPinNew_activity_change_pin.getText().toString().equals(edtReTypeNewPin_activity_change_pin.getText().toString())) {
+            Toast.makeText(this, "Vui lòng kiểm tra lại", Toast.LENGTH_SHORT).show();
             return false;
-        }
+                 }
         else {
             return true;
         }
@@ -48,34 +73,14 @@ public class ChangePinActivity extends AppCompatActivity {
         btnSaveChangePin_activity_change_pin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (edtCurrentPassword_activity_change_pin.length() == 0 ) {
-                    edtCurrentPassword_activity_change_pin.setError("Vui lòng nhập đầy đủ thông tin!",null);
-                }else if (edtCurrentPassword_activity_change_pin.length() < 6) {
-                    edtCurrentPassword_activity_change_pin.setError("Mật khẩu sai cú pháp",null);
-                    if (edtCurrentPin_activity_change_pin.length() == 0 ) {
-                        edtCurrentPin_activity_change_pin.setError("Vui lòng nhập đầy đủ thông tin!",null);
-                    }else if (edtCurrentPin_activity_change_pin.length() < 6) {
-                        edtCurrentPin_activity_change_pin.setError("Pin sai cú pháp",null);
+                Intent intent = new Intent(ChangePinActivity.this,MainActivity.class   );
 
-                    }else if (edtPinNew_activity_change_pin.length() ==0 ) {
-                    edtPinNew_activity_change_pin.setError("Vui lòng nhập đầy đủ thông tin",null);
-                    }else if (edtPinNew_activity_change_pin.length() < 6) {
-                    edtPinNew_activity_change_pin.setError("Pin sai cú pháp",null);
-                    }else if (edtReTypeNewPin_activity_change_pin.length() ==0 ) {
-                    edtReTypeNewPin_activity_change_pin.setError("Vui lòng nhập đầy đủ thông tin",null);
-                    }else if (edtReTypeNewPin_activity_change_pin.length() < 6) {
-                    edtReTypeNewPin_activity_change_pin.setError("Pin sai cú pháp",null);
+                if (comparePin() && checked()){
+                    startActivity(intent);
+                    Toast.makeText(ChangePinActivity.this, "Cập nhật mã pin thành công", Toast.LENGTH_SHORT).show();
 
                 }
-                    if (!edtPinNew_activity_change_pin.getText().toString().equals(edtReTypeNewPin_activity_change_pin.getText().toString()) ) {
-                    edtReTypeNewPin_activity_change_pin.setError("Mật khẩu không trùng khớp",null);
-                    }else
-                    {
-                        intent = new Intent(ChangePinActivity.this, AccountSettingActivity.class);
-                        startActivity(intent);
-                    }
 
-                }
 
             }
         });

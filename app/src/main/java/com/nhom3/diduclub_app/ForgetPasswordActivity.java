@@ -27,7 +27,14 @@ public class ForgetPasswordActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(ForgetPasswordActivity.this,OTPActivity.class);
-                if(binding.edtPhonenumber1.length() ==  10 ){
+                if(!binding.chkDieukhoan.isChecked()){
+                    Toast.makeText(ForgetPasswordActivity.this, "Vui lòng đồng ý điều khoản của chúng tôi", Toast.LENGTH_SHORT).show();
+
+                }else{
+                    Toast.makeText(ForgetPasswordActivity.this, "Bạn đã đồng ý điều khoản của chúng tôi", Toast.LENGTH_SHORT).show();
+
+                }
+                if(binding.edtPhonenumber1.length() ==  10 && binding.chkDieukhoan.isChecked()){
                     intent.putExtra("phone",binding.edtPhonenumber1.getText().toString());
                     startActivity(intent);
                 }else
