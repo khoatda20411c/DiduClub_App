@@ -19,7 +19,9 @@ import java.util.ArrayList;
 
 public class HistorycardActivity extends AppCompatActivity {
     ImageView imvBack_activity_historycard;
-    ListView lvAllHistoryOrder_activity_historycard;
+    ListView lvAllHistoryOrder_activity_historycard, lvConfirmHistoryOrder_activity_historycard,
+            lvDeliveringHistoryOrder_activity_historycard, lvReceivedHistoryOrder_activity_historycard,
+            lvCancelledHistoryOrder_activity_historycard;
 
     ArrayList<OrderHistoryModel> arrayList;
     OrderHistoryAdapter adapter;
@@ -34,12 +36,6 @@ public class HistorycardActivity extends AppCompatActivity {
 
         linkViews();
         defineTabHost();
-
-        arrayList = new ArrayList<OrderHistoryModel>();
-
-        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
-        lvAllHistoryOrder_activity_historycard.setAdapter(adapter);
-
         getData();
 
         imvBack_activity_historycard.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +49,15 @@ public class HistorycardActivity extends AppCompatActivity {
     }
 
     private void getData() {
-        Cursor cursor= LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory ",null);
+
+        /*-------------tab tất cả--------------*/
+        arrayList = new ArrayList<OrderHistoryModel>();
+        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
+        lvAllHistoryOrder_activity_historycard.setAdapter(adapter);
+
+//        Cursor cursor = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory WHERE Account_ID = ? ",new String[]{"DC01"});
+
+        Cursor cursor = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory  ",null);
 
         arrayList.clear();
 
@@ -75,6 +79,130 @@ public class HistorycardActivity extends AppCompatActivity {
         }
         cursor.close();
         adapter.notifyDataSetChanged();
+
+        /*-------------tab chờ xác nhận--------------*/
+        arrayList = new ArrayList<OrderHistoryModel>();
+        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
+        lvConfirmHistoryOrder_activity_historycard.setAdapter(adapter);
+
+//        Cursor cursor2 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory WHERE Account_ID = ? and Status = ? ",new String[]{"DC01", "Chờ xác nhận"});
+
+        Cursor cursor2 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory ",null);
+
+
+        arrayList.clear();
+
+        while (cursor2.moveToNext()) {
+            String OrhisId = cursor2.getString(0);
+            String AccountId = cursor2.getString(1);
+            String ProductName = cursor2.getString(2);
+            String OrderId = cursor2.getString(3);
+            String OrderTime = cursor2.getString(4);
+            int ProductQuantity = cursor2.getInt(5);
+            String ProductColor = cursor2.getString(6);
+            String Size = cursor2.getString(7);
+            double TotalPrice = cursor2.getDouble(8);
+            String CateGory = cursor2.getString(9);
+
+            OrderHistoryModel lichsumuahang = new OrderHistoryModel(OrhisId, AccountId, ProductName,
+                    OrderId, OrderTime, ProductQuantity, ProductColor, Size, TotalPrice, CateGory);
+            arrayList.add(lichsumuahang);
+        }
+        cursor2.close();
+        adapter.notifyDataSetChanged();
+
+        /*-------------tab đang giao hàng--------------*/
+        arrayList = new ArrayList<OrderHistoryModel>();
+        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
+        lvDeliveringHistoryOrder_activity_historycard.setAdapter(adapter);
+
+//        Cursor cursor3 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory WHERE Account_ID = ? and Status = ? ",new String[]{"DC01", "Đang giao hàng"});
+
+        Cursor cursor3 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory ",null);
+
+
+        arrayList.clear();
+
+        while (cursor3.moveToNext()) {
+            String OrhisId = cursor3.getString(0);
+            String AccountId = cursor3.getString(1);
+            String ProductName = cursor3.getString(2);
+            String OrderId = cursor3.getString(3);
+            String OrderTime = cursor3.getString(4);
+            int ProductQuantity = cursor3.getInt(5);
+            String ProductColor = cursor3.getString(6);
+            String Size = cursor3.getString(7);
+            double TotalPrice = cursor3.getDouble(8);
+            String CateGory = cursor3.getString(9);
+
+            OrderHistoryModel lichsumuahang = new OrderHistoryModel(OrhisId, AccountId, ProductName,
+                    OrderId, OrderTime, ProductQuantity, ProductColor, Size, TotalPrice, CateGory);
+            arrayList.add(lichsumuahang);
+        }
+        cursor3.close();
+        adapter.notifyDataSetChanged();
+
+        /*-------------tab đã nhận hàng--------------*/
+        arrayList = new ArrayList<OrderHistoryModel>();
+        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
+        lvReceivedHistoryOrder_activity_historycard.setAdapter(adapter);
+
+//        Cursor cursor4 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory WHERE Account_ID = ? and Status = ? ",new String[]{"DC01", "Đã nhận hàng"});
+
+        Cursor cursor4 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory ",null);
+
+
+        arrayList.clear();
+
+        while (cursor4.moveToNext()) {
+            String OrhisId = cursor4.getString(0);
+            String AccountId = cursor4.getString(1);
+            String ProductName = cursor4.getString(2);
+            String OrderId = cursor4.getString(3);
+            String OrderTime = cursor4.getString(4);
+            int ProductQuantity = cursor4.getInt(5);
+            String ProductColor = cursor4.getString(6);
+            String Size = cursor4.getString(7);
+            double TotalPrice = cursor4.getDouble(8);
+            String CateGory = cursor4.getString(9);
+
+            OrderHistoryModel lichsumuahang = new OrderHistoryModel(OrhisId, AccountId, ProductName,
+                    OrderId, OrderTime, ProductQuantity, ProductColor, Size, TotalPrice, CateGory);
+            arrayList.add(lichsumuahang);
+        }
+        cursor4.close();
+        adapter.notifyDataSetChanged();
+
+        /*-------------tab đã hủy--------------*/
+        arrayList = new ArrayList<OrderHistoryModel>();
+        adapter = new OrderHistoryAdapter(HistorycardActivity.this, R.layout.history_item_card_list, arrayList);
+        lvCancelledHistoryOrder_activity_historycard.setAdapter(adapter);
+
+//        Cursor cursor5 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory WHERE Account_ID = ? and Status = ? ",new String[]{"DC01", "Đã hủy"});
+
+        Cursor cursor5 = LoadingActivity.database.rawQuery(" SELECT * FROM OrderHistory ",null);
+
+        arrayList.clear();
+
+        while (cursor5.moveToNext()) {
+            String OrhisId = cursor5.getString(0);
+            String AccountId = cursor5.getString(1);
+            String ProductName = cursor5.getString(2);
+            String OrderId = cursor5.getString(3);
+            String OrderTime = cursor5.getString(4);
+            int ProductQuantity = cursor5.getInt(5);
+            String ProductColor = cursor5.getString(6);
+            String Size = cursor5.getString(7);
+            double TotalPrice = cursor5.getDouble(8);
+            String CateGory = cursor5.getString(9);
+
+            OrderHistoryModel lichsumuahang = new OrderHistoryModel(OrhisId, AccountId, ProductName,
+                    OrderId, OrderTime, ProductQuantity, ProductColor, Size, TotalPrice, CateGory);
+            arrayList.add(lichsumuahang);
+        }
+        cursor5.close();
+        adapter.notifyDataSetChanged();
+
     }
 
     private void defineTabHost() {
@@ -87,25 +215,31 @@ public class HistorycardActivity extends AppCompatActivity {
         // Code for adding Tab 1 to the tabhost
         TabHost.TabSpec spec = tabhost.newTabSpec("Tất cả");
         spec.setContent(R.id.tab_All);
-
-        // setting the name of the tab 1 as "Tab One"
         spec.setIndicator("Tất cả");
-
-        // adding the tab to tabhost
         tabhost.addTab(spec);
 
         // Code for adding Tab 2 to the tabhost
-        spec = tabhost.newTabSpec("Đang giao hàng");
-        spec.setContent(R.id.tab_Delivering);
-
-        // setting the name of the tab 1 as "Tab Two"
-        spec.setIndicator("Đang giao hàng");
+        spec = tabhost.newTabSpec("Chờ xác nhận");
+        spec.setContent(R.id.tab_Confirm);
+        spec.setIndicator("Chờ xác nhận");
         tabhost.addTab(spec);
 
         // Code for adding Tab 3 to the tabhost
+        spec = tabhost.newTabSpec("Đang giao hàng");
+        spec.setContent(R.id.tab_Delivering);
+        spec.setIndicator("Đang giao hàng");
+        tabhost.addTab(spec);
+
+        // Code for adding Tab 4 to the tabhost
         spec = tabhost.newTabSpec("Đã nhận hàng");
         spec.setContent(R.id.tab_Received);
         spec.setIndicator("Đã nhận hàng");
+        tabhost.addTab(spec);
+
+        // Code for adding Tab 5 to the tabhost
+        spec = tabhost.newTabSpec("Đã hủy");
+        spec.setContent(R.id.tab_Cancelled);
+        spec.setIndicator("Đã hủy");
         tabhost.addTab(spec);
     }
 
@@ -113,6 +247,9 @@ public class HistorycardActivity extends AppCompatActivity {
         imvBack_activity_historycard = findViewById(R.id.imv_Back_activity_historycard);
 
         lvAllHistoryOrder_activity_historycard = findViewById(R.id.lv_AllHistoryOrder_activity_historycard);
-
+        lvConfirmHistoryOrder_activity_historycard = findViewById(R.id.lv_ConfirmHistoryOrder_activity_historycard);
+        lvDeliveringHistoryOrder_activity_historycard = findViewById(R.id.lv_DeliveringHistoryOrder_activity_historycard);
+        lvReceivedHistoryOrder_activity_historycard = findViewById(R.id.lv_ReceivedHistoryOrder_activity_historycard);
+        lvCancelledHistoryOrder_activity_historycard = findViewById(R.id.lv_CancelledHistoryOrder_activity_historycard);
     }
 }
