@@ -45,7 +45,7 @@ public class BeforeLoginActivity extends AppCompatActivity {
         btnBackToHomePage_activity_before_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(BeforeLoginActivity.this,MainActivity.class);
+                Intent intent=new Intent(BeforeLoginActivity.this,ProductSearchActivity.class);
                 startActivity(intent);
 
             }

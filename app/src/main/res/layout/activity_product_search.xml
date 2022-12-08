@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductSearchActivity"
+    android:padding="15dp"
+    android:orientation="vertical">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:weightSum="10">
+
+                <ImageView
+                    android:id="@+id/btn_BackToHomePage_activity_product_search"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_round_arrow_circle_left_24" />
+
+                <EditText
+                    android:id="@+id/edt_Search_ProductSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:height="50dp"
+                    android:background="@drawable/custom_search_mainactivity"
+                    android:drawableLeft="@drawable/ic_baseline_search_24"
+                    android:hint="Tìm kiếm/ Tra cứu sản phẩm"
+                    android:minHeight="48dp"
+                    android:paddingLeft="10dp"
+                    app:backgroundTint="@null"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck">
+
+                </EditText>
+                <ImageView
+                    android:layout_weight="3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/filter"
+                    android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lịch sử tìm kiếm"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+        <ListView
+            android:id="@+id/lv_HistorySearch_fragment_product_search"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đề xuất sản phẩm"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+        <GridView
+            android:id="@+id/gv_ProductSuggest_fragment_product_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2"/>
+</LinearLayout>
