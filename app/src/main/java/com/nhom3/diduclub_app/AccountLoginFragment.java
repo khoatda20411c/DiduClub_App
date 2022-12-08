@@ -51,7 +51,7 @@ public class AccountLoginFragment extends Fragment {
 
     private void getData() {
         Cursor cursor = LoadingActivity.database.rawQuery(" SELECT Last_Name, First_Name, Email, Customer_Type, Avatar FROM Account WHERE Account_ID = ? ",
-                new String[]{"DC04"});
+                new String[]{"DC03"});
         while (cursor.moveToNext()) {
             String Acclastname = cursor.getString(0);
             String Accfirstname = cursor.getString(1);
@@ -61,10 +61,13 @@ public class AccountLoginFragment extends Fragment {
             Bitmap bitmap = BitmapFactory.decodeByteArray(AccImage, 0, AccImage.length);
             imvAccountAvatar_activity_account.setImageBitmap(bitmap);
 
+
+
             txtAccountLastName_activity_account.setText(Acclastname);
             txtAccountFirstName_activity_account.setText(Accfirstname);
             txtAccountEmail_activity_account.setText(Accemail);
             txtAccountRate_activity_account.setText(AccType);
+
         }
         cursor.close();
     }
@@ -73,7 +76,8 @@ public class AccountLoginFragment extends Fragment {
         btnPersonalInfo_activity_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), UserInfoActivity.class);
+                startActivity(intent);
             }
         });
 

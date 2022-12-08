@@ -71,7 +71,7 @@ public class VoucherAdapter extends BaseAdapter {
 
         VoucherModel v = voucherModels.get(i);
         holder.txt_VoucherName.setText(v.getVoucher_Name());
-        holder.txt_VoucherTerms.setText(String.valueOf(v.getVoucher_Values()));
+        holder.txt_VoucherTerms.setText(String.valueOf(v.getVoucher_Values()) + " VND");
         holder.txt_VoucherDate.setText(v.getVoucher_Date());
 
         // Chuyển byte[] --> bitmap
